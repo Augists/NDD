@@ -1120,7 +1120,7 @@ public class BDD extends NodeTable {
 			nstack.pop();
 			return u;
 		} else {
-			int low= nstack.push( oneSat(getLow(bdd)));
+			int low = nstack.push( oneSat(getLow(bdd)));
 			int u = mk( getVar(bdd), low, 0);
 			nstack.pop();
 			return u;

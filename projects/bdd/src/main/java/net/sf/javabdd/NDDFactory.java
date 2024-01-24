@@ -499,10 +499,11 @@ public class NDDFactory extends BDDFactory {
             return null;
         }
 
-        // TODO: need satify one
         @Override
         public BDD satOne() {
-            return null;
+            NDD ret = this._index.satOne_rec();
+            ret.printOut();
+            return new bdd(ret);
         }
 
         @Override
@@ -571,7 +572,8 @@ public class NDDFactory extends BDDFactory {
         public double satCount() {
             if (div.length == 0)
                 throw new BDDException("no initialization for NDD");
-            return this._index.SATCOUNT(this._index.field);
+            //return this._index.SATCOUNT(this._index.field);
+            return this._index.SATCOUNT(0);
         }
 
         @Override
@@ -619,6 +621,30 @@ public class NDDFactory extends BDDFactory {
             this.field = a.field;
             this.edges = a.edges;
         }
+
+        private NDD satOne_rec() {
+            if (this.is_True() || this.is_False())
+                return this;
+            Map<NDD, Integer> edges = this.edges;
+            NDD child = null;
+            int edge = 0;
+            for (Map.Entry<NDD, Integer> entry : edges.entrySet()) {
+                if (entry.getKey().is_False())
+                    continue;
+                child = entry.getKey();
+                edge = entry.getValue();
+                break;
+            }
+            if (child == null)
+                return NDDFalse;        // TODO
+            int jddSat = bdd.oneSat(edge);
+            NDD result = child.satOne_rec();
+            HashMap<NDD, Integer> newEdge = new HashMap<>();
+            newEdge.put(result, jddSat);
+            bdd newbdd = new bdd(this.field, newEdge);
+            return newbdd._index;
+        }
+
 
         public boolean equals(NDD obj) {
             return this == obj;
@@ -961,7 +987,7 @@ public class NDDFactory extends BDDFactory {
             if (this.is_False()) return 0;
             else if (this.is_True()) {
                 if (field == fieldNum) return 1;
-                else {  // in case of NDD which field != fieldNum - 1 but point to NDDTrue
+                else {  // in case of NDD which field != fieldNum but point to NDDTrue
                     int len = 0;
                     if (field == 0) len = upperBound[field];
                     else len = upperBound[field] - upperBound[field - 1];
