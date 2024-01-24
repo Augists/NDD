@@ -10,7 +10,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.sf.javabdd.BDD;
 import net.sf.javabdd.BDDFactory;
-import net.sf.javabdd.NDDFactory;
 import org.batfish.symbolic.state.BlackHole;
 import org.batfish.symbolic.state.InterfaceAccept;
 import org.batfish.symbolic.state.NodeDropNoRoute;

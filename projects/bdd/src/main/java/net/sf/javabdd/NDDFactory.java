@@ -413,6 +413,7 @@ public class NDDFactory extends BDDFactory {
          */
         @Override
         BDD apply(BDD that, BDDOp opr, boolean makeNew) {
+            toProtect.clear();
             // initialize assurance for return in default case
             NDD r = null;
             NDD x = this._index;
@@ -423,9 +424,10 @@ public class NDDFactory extends BDDFactory {
                 case 2: r = x.OR(y); break;
                 case 3: r = x.AND(y).NOT(); break;
                 case 4: r = x.OR(y).NOT(); break;
-                case 5: break;  // r = bdd.imp(x, y);
-                case 6: break;  // r = bdd.biimp(x, y);
+                case 5: r = x.NOT().OR(y); break;  // r = bdd.imp(x, y);
+                case 6: r = x.BIIMP(y); break;     // r = bdd.biimp(x, y);
                 case 7: r = x.DIFF(y); break;
+                case 9: r = y.NOT().OR(x); break;  // inverse imp
                 default:
                     throw new BDDException();
             }
@@ -441,24 +443,7 @@ public class NDDFactory extends BDDFactory {
         }
 
         public BDD apply(BDD that, BDDOp opr) {
-            toProtect.clear();
-            // initialize assurance for return in default case
-            NDD r = null;
-            NDD x = this._index;
-            NDD y = ((bdd) that)._index;
-            switch (opr.id) {
-                case 0: r = x.AND(y); break;
-                case 1: r = x.AND(y.NOT()).OR(y.AND(x.NOT())); break;  // r = bdd.xor(x, y);
-                case 2: r = x.OR(y); break;
-                case 3: r = x.AND(y).NOT(); break;
-                case 4: r = x.OR(y).NOT(); break;
-                case 5: break;  // r = bdd.imp(x, y);
-                case 6: break;  // r = bdd.biimp(x, y);
-                case 7: r = x.DIFF(y); break;
-                default:
-                    throw new BDDException();
-            }
-            return new bdd(r);
+            return apply(that, opr, true);
         }
 
         @Override
@@ -468,7 +453,8 @@ public class NDDFactory extends BDDFactory {
             table.ref(tmp._index);
             table.deref(this._index);
             if (!this.equals(that)) {
-              that.free();
+                // deep copy
+                that.free();
             }
             this._index = tmp._index;
             return this;
@@ -610,7 +596,7 @@ public class NDDFactory extends BDDFactory {
         public void free() {
             table.deref(_index);
             // create new NDD to point to
-            _index = new NDD();
+            // _index = null;
         }
     }
 
@@ -843,6 +829,23 @@ public class NDDFactory extends BDDFactory {
                 table.orCache.insert(hash, this, b, ret);
                 return ret;
             }
+        }
+
+        public NDD BIIMP(NDD that) {
+            if (this.equals(that)) {
+                return NDDTrue;
+            } else if (this.is_False()) {
+                return that.NOT();
+            } else if (this.is_True()) {
+                return that;
+            } else if (that.is_False()) {
+                return this.NOT();
+            } else if (that.is_True()) {
+                return this;
+            }
+            // TODO
+            System.out.println("BIIMP x " + this + " y " + that);
+            return null;
         }
 
         public NDD NOT() {
@@ -1212,8 +1215,9 @@ public class NDDFactory extends BDDFactory {
             int newRef = refCount.get(a) - 1;
             if (newRef >= 0) {
                 refCount.put(a, newRef);
-            } else {
-                System.out.println("error: ret count less than 0");
+            }
+            else {  // TODO: will delete else
+                System.out.println("ret count less than 0");
             }
         }
 
@@ -1681,13 +1685,11 @@ public class NDDFactory extends BDDFactory {
         }
         BDD ret = new bdd(NDDFalse);
         for (BDD bdd : bdds) {
-            ret.orWith(bdd);
+            ret = ret.or(bdd);
         }
-        /* free when in with method
-         * if (free) {
-         *     bdds.forEach(BDD::free);
-         * }
-         */
+        if (free) {
+            bdds.forEach(BDD::free);
+        }
         return new bdd(ret);
     }
 

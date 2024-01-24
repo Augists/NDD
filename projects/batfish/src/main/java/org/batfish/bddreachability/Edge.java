@@ -7,7 +7,6 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.sf.javabdd.BDD;
-import net.sf.javabdd.NDDFactory;
 import org.batfish.bddreachability.transition.Identity;
 import org.batfish.bddreachability.transition.Transition;
 import org.batfish.symbolic.state.StateExpr;
@@ -28,7 +27,6 @@ public final class Edge {
   Edge(StateExpr preState, StateExpr postState, BDD constraint) {
     _preState = preState;
     _postState = postState;
-    System.out.println("edge " + ((NDDFactory.bdd) constraint)._index);
     _transition = constraint(constraint);
   }
 

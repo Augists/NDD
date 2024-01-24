@@ -5,7 +5,6 @@ import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.base.MoreObjects;
 import java.util.Objects;
 import net.sf.javabdd.BDD;
-import net.sf.javabdd.NDDFactory;
 
 /** A transition that applies a constraint. */
 public final class Constraint implements Transition {
@@ -45,7 +44,6 @@ public final class Constraint implements Transition {
 
   @Override
   public BDD transitBackward(BDD bdd) {
-    System.out.println("transitBackward " + ((NDDFactory.bdd) _constraint)._index);
     return _constraint.and(bdd);
   }
 

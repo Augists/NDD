@@ -433,6 +433,7 @@ public class BDDPacket implements Serializable {
     if (saneBDD.isZero()) {
       return saneBDD;
     }
+    System.out.println("sane bdd " + ((NDDFactory.bdd) saneBDD)._index);
     return BDDRepresentativePicker.pickRepresentative(
         saneBDD, _flowConstraintGeneratorSupplier.get().getFlowPreference(preference));
   }

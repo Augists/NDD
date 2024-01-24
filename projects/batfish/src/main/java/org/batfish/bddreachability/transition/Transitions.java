@@ -7,7 +7,6 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Iterables;
 
 import java.util.Arrays;
-//import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
@@ -20,7 +19,6 @@ import java.util.stream.Stream;
 import javax.annotation.Nullable;
 import net.sf.javabdd.BDD;
 import net.sf.javabdd.BDDFactory;
-import net.sf.javabdd.NDDFactory;
 import org.batfish.bddreachability.BDDOutgoingOriginalFlowFilterManager;
 import org.batfish.bddreachability.LastHopOutgoingInterfaceManager;
 import org.batfish.common.bdd.BDDPairingFactory;
@@ -302,7 +300,6 @@ public final class Transitions {
   }
 
   public static Transition constraint(BDD bdd) {
-    System.out.println("constrains " + ((NDDFactory.bdd) bdd)._index);
     return bdd.isOne() ? IDENTITY : bdd.isZero() ? ZERO : new Constraint(bdd);
   }
 
