@@ -29,6 +29,7 @@ public class NDDFactory extends BDDFactory {
     public int fieldNum;
     public int[] upperBound;
     public double[] div;
+    public int max;
 
     public HashSet<NDD> toProtect = new HashSet<>();
 
@@ -128,6 +129,7 @@ public class NDDFactory extends BDDFactory {
      * num: sum of field[]
      */
     public void setFieldBoundDiv(int max, int[] field) {
+        this.max = max;
         int size = field.length;
         fieldNum = size;
 
@@ -502,7 +504,6 @@ public class NDDFactory extends BDDFactory {
         @Override
         public BDD satOne() {
             NDD ret = this._index.satOne_rec();
-            ret.printOut();
             return new bdd(ret);
         }
 
@@ -520,18 +521,54 @@ public class NDDFactory extends BDDFactory {
          */
         @Override
         public BitSet minAssignmentBits() {
+            System.out.println();
+            System.out.println("one time minAssignment");
             BitSet set = new BitSet(upperBound[fieldNum - 1]);
             minassignmentbits_rec(set, this._index);
+            System.out.println("minAssignment " + set);
             return set;
         }
 
         private void minassignmentbits_rec(BitSet set, NDD ndd) {
             if (ndd.is_False() || ndd.is_True()) {
+                System.out.println("rec true or false");
                 return;
             }
-            set.set(ndd.field);
-            Iterator edge = ndd.edges.entrySet().iterator();
-            NDD child = ((Map.Entry<NDD, Integer>) edge.next()).getKey();
+            NDD child = null;
+            BitSet bitset = null;
+            System.out.println("edge size " + ndd.edges.size());
+            for (Map.Entry<NDD, Integer> entry : ndd.edges.entrySet()) {
+                NDD c = entry.getKey();
+                if (c.is_False())
+                    continue;
+                int e = entry.getValue();
+                BitSet bit = bdd.minAssignment(e);
+                System.out.println("rec edge bit " + bit);
+                if (bitset == null) {
+                    bitset = bit;
+                    child = c;
+                } else {
+                    // compare to get min
+                    int i = 0;
+                    for ( ; i < bit.length(); i++) {
+                        if (bitset.get(i) != bit.get(i))
+                            break;
+                    }
+                    if (bitset.get(i)) {
+                        bitset = bit;
+                        child = c;
+                    }
+                }
+            }
+            // + offset
+            // upperBound[ndd.field - 1] -
+            int offset = upperBound[ndd.field] - upperBound[ndd.field - 1];
+            for (int b = bitset.length(); (b = bitset.previousSetBit(b - 1)) >= 0; ) {
+                System.out.println("b " + b + " offset " + offset + " field " + ndd.field + " field start " + upperBound[ndd.field - 1]);
+                set.set(b + (max - offset));
+            }
+            // set.or(bitset);
+            System.out.println("set " + set);
             minassignmentbits_rec(set, child);
         }
 
