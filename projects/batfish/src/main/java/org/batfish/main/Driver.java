@@ -151,6 +151,17 @@ public class Driver {
                 Answer answer = null;
                 NetworkSnapshot snapshot =
                     new NetworkSnapshot(settings.getContainer(), settings.getTestrig());
+                /*
+                // memory
+                Runtime r = Runtime.getRuntime();
+                r.gc();
+                r.gc();
+                long m1 = r.totalMemory() - r.freeMemory();
+
+                // time
+                long start = System.nanoTime();
+
+                 */
                 try {
                   answer = batfish.run(snapshot);
                   if (answer.getStatus() == null) {
@@ -209,6 +220,18 @@ public class Driver {
                         e.getClass().getName() + ": " + e.getMessage());
                   }
                 }
+                /*
+
+                // time
+                System.out.println("time: "+(System.nanoTime() - start) / 1e9 + "S");
+
+                // memory
+                Runtime r1 = Runtime.getRuntime();
+                r1.gc();
+                r1.gc();
+                long m2 = r1.totalMemory() - r1.freeMemory();
+                System.out.println("memory: " + (m2 - m1) / (1024 * 1024) + "MB");
+                 */
               });
 
       thread.start();

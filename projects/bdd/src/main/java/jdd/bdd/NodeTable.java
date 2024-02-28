@@ -28,6 +28,8 @@ import java.util.LinkedList;
 
 public class NodeTable {
 
+	public static int mkCount = 0;
+
 	/** used to mark/unmark BDD nodes */
 	public static final int NODE_MARK = 0x80000000, NODE_UNMARK = 0x7FFFFFFF;
 	public static final short MAX_REFCOUNT = 32767; /** the largest possible ref-count */
@@ -346,6 +348,8 @@ public class NodeTable {
 			grow();
 			hash = compute_hash(v,l,h); // table_size might have changed (or not if we only did a GC)
 		}
+
+		mkCount++;
 
 		// takke next free node
 		curr = first_free_node;

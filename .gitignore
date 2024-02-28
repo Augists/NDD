@@ -3,6 +3,7 @@
 /testrigs
 .DS_Store
 .*.swp
+*.log
 
 # Ignore the list of java files to format-check
 /files_to_check

@@ -4,11 +4,15 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static org.batfish.common.bdd.BDDUtils.bitvector;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.BitSet;
 import java.util.Optional;
 import javax.annotation.Nonnull;
 import net.sf.javabdd.BDD;
 import net.sf.javabdd.BDDFactory;
+import net.sf.javabdd.NDDFactory;
 import org.batfish.datamodel.IpWildcard;
 import org.batfish.datamodel.Prefix;
 

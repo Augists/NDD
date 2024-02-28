@@ -10,11 +10,12 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableMap;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.Map.Entry;
 import java.util.function.Supplier;
 import javax.annotation.Nullable;
 import net.sf.javabdd.BDD;
@@ -71,6 +72,8 @@ public final class IpSpaceToBDD implements GenericIpSpaceVisitor<BDD> {
           .removalListener(removal -> ((BDD) removal.getValue()).free())
           .build(CacheLoader.from(ipSpace -> ipSpace.accept(this)));
 
+  // public HashMap<IpSpace, BDD> _cache_map = new HashMap<>();
+
   private final @Nullable IpSpaceToBDD _nonRefIpSpaceToBDD;
 
   /**
@@ -104,6 +107,29 @@ public final class IpSpaceToBDD implements GenericIpSpaceVisitor<BDD> {
 
   @Override
   public BDD visit(IpSpace ipSpace) {
+    /*
+    if (_nonRefIpSpaceToBDD == null || ipSpaceCanContainReferences(ipSpace)) {
+      // Use local cache. Make a copy so that the caller owns it.
+      return ipSpace.accept(this).id();
+    }
+    return _nonRefIpSpaceToBDD.visit(ipSpace);
+     */
+
+    /*
+    if (_nonRefIpSpaceToBDD == null || ipSpaceCanContainReferences(ipSpace)) {
+      // Use local cache. Make a copy so that the caller owns it.
+      if (_cache_map.containsKey(ipSpace)) {
+        return _cache_map.get(ipSpace).id();
+      } else {
+        BDD ret = ipSpace.accept(this);
+        _cache_map.put(ipSpace, ret);
+        return ret.id();
+      }
+      // return _cache.getUnchecked(ipSpace).id();
+    }
+    return _nonRefIpSpaceToBDD.visit(ipSpace);
+     */
+
     if (_nonRefIpSpaceToBDD == null || ipSpaceCanContainReferences(ipSpace)) {
       // Use local cache. Make a copy so that the caller owns it.
       return _cache.getUnchecked(ipSpace).id();

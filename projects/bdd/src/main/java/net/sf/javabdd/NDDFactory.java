@@ -18,6 +18,14 @@ import java.util.LinkedList;
 
 public class NDDFactory extends BDDFactory {
 
+    public void free() {
+        bdd = null;
+        table = null;
+    }
+
+    public static boolean test = true;
+    public static int mkCount = 0;
+
     public jdd.bdd.BDD bdd;
     public NodeTable table;
     public int[] vars;
@@ -45,6 +53,15 @@ public class NDDFactory extends BDDFactory {
         BDDFactory f = new NDDFactory(nodeNum, cacheSize);
         // ((NDDFactory) f).setFieldBoundDiv(nodenum, 0);
         return f;
+    }
+
+    public void showStatus() {
+        System.out.println("=================================");
+        System.out.println("NDD node count: " + mkCount);
+        System.out.println("BDD node count: " + bdd.mkCount);
+        System.out.println("BDD show status: ");
+        bdd.showStats();
+        System.out.println("=================================");
     }
 
     /**
@@ -153,6 +170,10 @@ public class NDDFactory extends BDDFactory {
     @Override
     public BDD nithVar(int var) {
         return new bdd(((bdd) ithVar(var))._index.NOT());
+    }
+
+    public BDD createBDD(NDD n) {
+        return new bdd(n);
     }
 
     public class bdd extends BDD {
@@ -1207,6 +1228,8 @@ public class NDDFactory extends BDDFactory {
             }
             NDD node = NDDs.get(field).get(port_pred);
             if (node == null) { // create new node
+                if (test)
+                    mkCount++;
                 tableSize++;
                 Iterator<Map.Entry<NDD, Integer>> iterator = port_pred.entrySet().iterator();
                 while (iterator.hasNext()) {
@@ -1235,6 +1258,7 @@ public class NDDFactory extends BDDFactory {
         }
 
         private void GCOrGrow() {
+            System.out.println("GC or Grow");
             GC();
             if ((maxSize - tableSize) <= maxSize * quickGrowThreshold) {
                 grow();
@@ -1413,7 +1437,10 @@ public class NDDFactory extends BDDFactory {
         private int good_hash(NDD i, NDD j) {
             // return HashFunctions.mix(HashFunctions.hash_prime(i,j)) & cache_mask;
             // NEW: cache size is prime
-            return Math.abs((i.hashCode()+j.hashCode())) % size;
+            return (
+                Math.abs(i.hashCode()) % size
+                 + Math.abs(j.hashCode()) % size
+            ) % size;
         }
     }
 
@@ -1707,6 +1734,21 @@ public class NDDFactory extends BDDFactory {
         if (literals.length == 1) {
             return literals[0].id();
         }
+        /*
+        int result = 1;
+        for (int i = 0; i < literals.length; i++) {
+            Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) literals[i])._index.edges;
+            Iterator<Map.Entry<NDDFactory.NDD, Integer>> iter = e.entrySet().iterator();
+            int tmp = result;
+            result = bdd.and(result, iter.next().getValue());
+            bdd.ref(result);
+            bdd.deref(tmp);
+        }
+        HashMap<NDDFactory.NDD, Integer> m = new HashMap<>();
+        m.put(NDDTrue, result);
+        NDDFactory.NDD ndd = table.mk(((NDDFactory.bdd) literals[0])._index.field, m);
+        return new bdd(ndd);
+         */
         BDD ret = new bdd(NDDTrue);
         for (BDD bdd : literals) {
             BDD tmp = ret.and(bdd);
@@ -1715,6 +1757,39 @@ public class NDDFactory extends BDDFactory {
             ret = tmp;
         }
         return ret;
+    }
+
+    public BDD andLiterals(boolean ip, BDD... literals) {
+        int length = literals.length;
+        if (length == 0) {
+            return new bdd(NDDTrue);
+        }
+        if (length == 1) {
+            return literals[0].id();
+        }
+        int lastFieldNum = length % 8;
+        int fieldCount = length / 8;
+        NDD ret = NDDTrue;
+        while (fieldCount > 0) {
+            int result = 1;
+            int start = fieldCount * 8;
+            int end = start + lastFieldNum;
+            while (start < end) {
+                Map<NDD, Integer> e = ((bdd) literals[start])._index.edges;
+                Iterator<Map.Entry<NDD, Integer>> iter = e.entrySet().iterator();
+                int tmp = result;
+                result = bdd.and(result, iter.next().getValue());
+                bdd.ref(result);
+                bdd.deref(tmp);
+                start++;
+            }
+            HashMap<NDD, Integer> m = new HashMap<>();
+            m.put(ret, result);
+            ret = table.mk(((bdd) literals[start - 1])._index.field, m);
+            fieldCount--;
+        }
+        ret.printOut();
+        return new bdd(ret);
     }
 
     /**

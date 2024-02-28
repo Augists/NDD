@@ -119,6 +119,7 @@ public class BDDPacket implements Serializable {
   public BDDPacket() {
     //this(defaultFactory(JFactory::init));
     this(defaultFactory(NDDFactory::init));
+    //System.out.println(Thread.currentThread().getId() + " create bdd packet " + _factory);
   }
 
   /**
@@ -168,7 +169,7 @@ public class BDDPacket implements Serializable {
       FRAGMENT_OFFSET_LENGTH,
       PACKET_LENGTH_LENGTH
     };
-    ((NDDFactory) _factory).setVarNum(numNeeded, 10000, 10000);
+    ((NDDFactory) _factory).setVarNum(numNeeded, 100000, 20000);
 
     _bitNames = new HashMap<>();
 

@@ -4,13 +4,17 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static org.batfish.common.bdd.BDDUtils.bitvector;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.stream.Collectors;
 import net.sf.javabdd.BDD;
 import net.sf.javabdd.BDDFactory;
+import net.sf.javabdd.NDDFactory;
 import org.batfish.datamodel.Ip;
 import org.batfish.datamodel.IpWildcard;
 import org.batfish.datamodel.Prefix;
@@ -132,7 +136,35 @@ public final class MutableBDDInteger extends BDDInteger {
       }
       val >>= 1;
     }
-    return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
+    NDDFactory factory = (NDDFactory) _factory;
+    int f = 0;
+    for (Iterator<BDD> iter = _falses.iterator(); iter.hasNext(); ) {
+      Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
+      Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
+      int tmp = f;
+      f = factory.bdd.or(f, iterEdge.next().getValue());
+      factory.bdd.ref(f);
+      factory.bdd.deref(tmp);
+    }
+    HashMap<NDDFactory.NDD, Integer> mf = new HashMap<>();
+    mf.put(factory.NDDTrue, f);
+    NDDFactory.NDD nddFalse = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
+    BDD fret = factory.createBDD(nddFalse);
+    int t = 0;
+    for (Iterator<BDD> iter = _trues.iterator(); iter.hasNext(); ) {
+      Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
+      Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
+      int tmp = t;
+      f = factory.bdd.and(t, iterEdge.next().getValue());
+      factory.bdd.ref(t);
+      factory.bdd.deref(tmp);
+    }
+    HashMap<NDDFactory.NDD, Integer> mt = new HashMap<>();
+    mt.put(factory.NDDTrue, f);
+    NDDFactory.NDD nddTrue = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
+    BDD tret = factory.createBDD(nddTrue);
+    return tret.diffWith(fret);
+    // return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
   }
 
   @Override
@@ -153,7 +185,35 @@ public final class MutableBDDInteger extends BDDInteger {
         }
       }
     }
-    return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
+    NDDFactory factory = (NDDFactory) _factory;
+    int f = 0;
+    for (Iterator<BDD> iter = _falses.iterator(); iter.hasNext(); ) {
+      Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
+      Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
+      int tmp = f;
+      f = factory.bdd.or(f, iterEdge.next().getValue());
+      factory.bdd.ref(f);
+      factory.bdd.deref(tmp);
+    }
+    HashMap<NDDFactory.NDD, Integer> mf = new HashMap<>();
+    mf.put(factory.NDDTrue, f);
+    NDDFactory.NDD nddFalse = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
+    BDD fret = factory.createBDD(nddFalse);
+    int t = 0;
+    for (Iterator<BDD> iter = _trues.iterator(); iter.hasNext(); ) {
+      Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
+      Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
+      int tmp = t;
+      f = factory.bdd.and(t, iterEdge.next().getValue());
+      factory.bdd.ref(t);
+      factory.bdd.deref(tmp);
+    }
+    HashMap<NDDFactory.NDD, Integer> mt = new HashMap<>();
+    mt.put(factory.NDDTrue, f);
+    NDDFactory.NDD nddTrue = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
+    BDD tret = factory.createBDD(nddTrue);
+    return tret.diffWith(fret);
+    // return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
   }
 
   /*

@@ -83,6 +83,7 @@ import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import net.sf.javabdd.BDD;
+import net.sf.javabdd.NDDFactory;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.configuration2.ImmutableConfiguration;
@@ -2870,7 +2871,8 @@ public class Batfish extends PluginConsumer implements IBatfish {
             params.getActions());
 
     Set<Flow> flows = constructFlows(pkt, reachableBDDs);
-
+    ((NDDFactory) pkt.getFactory()).showStatus();
+    // ((NDDFactory) pkt.getFactory()).free();
     return new TraceWrapperAsAnswerElement(buildFlows(snapshot, flows, ignoreFilters));
   }
 

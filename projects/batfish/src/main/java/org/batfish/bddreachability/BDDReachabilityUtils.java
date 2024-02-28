@@ -236,6 +236,7 @@ public final class BDDReachabilityUtils {
             entry -> {
               IngressLocation loc = entry.getKey();
               BDD headerSpace = entry.getValue();
+              System.out.println("header space bdd satCount " + headerSpace.satCount());
               Optional<Builder> optionalFlow = pkt.getFlow(headerSpace);
               if (!optionalFlow.isPresent()) {
                 return Stream.of();
