@@ -1,0 +1,125 @@
+FW:15.227067701
+VxLAN:47.128125559
+VC:1.484202297
+VNI:12.866687592
+EPG:0.764650394
+GBP:4.600788766
+PBR:1.17824E-4
+update model:126.040221322
+reach size:110000
+property check:35.566964344
+total:161.607185666
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+node for APs:69934
+memory:1452MB
+
+update: base to post0
+parse file:0.00296338
+FW:0.023007563
+VxLAN:0.054535883
+VC:0.01212033
+VNI:0.020506655
+EPG:0.017287175
+GBP:5.8790887
+PBR:8.7805E-5
+update model:6.006736009
+reach size:110088
+property check:21.539654169
+total:27.546390178
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+
+update: post0 to post1
+parse file:0.001633782
+FW:7.122E-6
+VxLAN:2.41822E-4
+VC:4.7165E-5
+VNI:3.2089E-5
+EPG:0.017527158
+GBP:8.561236113
+PBR:1.22133E-4
+update model:8.57932891
+reach size:110088
+property check:22.420089751
+total:30.999418661
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+
+update: post1 to post2
+parse file:0.003297824
+FW:0.003347934
+VxLAN:0.024863579
+VC:0.005540539
+VNI:0.005887111
+EPG:0.016220549
+GBP:11.154061318
+PBR:0.009650091
+update model:11.219698764
+reach size:110109
+property check:26.31799892
+total:37.537697684
+field0 2202
+field1 370
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4625
+
+update: post2 to post3
+parse file:0.002752944
+FW:0.006277457
+VxLAN:0.032200279
+VC:0.006471279
+VNI:0.007704195
+EPG:0.014153409
+GBP:11.960046239
+PBR:1.03658E-4
+update model:12.027080316
+reach size:110130
+property check:22.96066127
+total:34.987741586
+field0 2203
+field1 370
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4626
+
+update: post3 to post4
+parse file:0.004540603
+FW:0.031236907
+VxLAN:0.169888553
+VC:0.006970399
+VNI:0.018208826
+EPG:0.010373022
+GBP:15.709589165
+PBR:9.365E-5
+update model:15.946454247
+reach size:110592
+property check:27.445966645
+total:43.392420892
+field0 2214
+field1 370
+field2 202
+field3 369
+field4 369
+field5 1114
+AP:4638

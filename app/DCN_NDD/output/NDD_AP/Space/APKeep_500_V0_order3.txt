@@ -1,0 +1,125 @@
+FW:96.735139235
+VxLAN:220.158982212
+VC:6.277852148
+VNI:51.21504668
+EPG:4.14132098
+GBP:84.243953685
+PBR:5.51274E-4
+update model:699.450839345
+reach size:275000
+property check:196.766377008
+total:896.217216353
+field0 5501
+field1 926
+field2 501
+field3 926
+field4 926
+field5 2764
+AP:11544
+node for APs:161603
+memory:7363MB
+
+update: base to post0
+parse file:0.00404095
+FW:0.044282263
+VxLAN:0.109461871
+VC:0.028067783
+VNI:0.045719557
+EPG:0.029095607
+GBP:103.669244612
+PBR:9.5626E-5
+update model:103.92611907
+reach size:275088
+property check:111.379195897
+total:215.305314967
+field0 5501
+field1 926
+field2 501
+field3 926
+field4 926
+field5 2764
+AP:11544
+
+update: post0 to post1
+parse file:0.003470858
+FW:8.4238E-5
+VxLAN:4.74675E-4
+VC:4.6798E-5
+VNI:4.7985E-5
+EPG:0.03161282
+GBP:118.252571738
+PBR:2.99134E-4
+update model:118.28524342
+reach size:275088
+property check:115.688546
+total:233.97378942
+field0 5501
+field1 926
+field2 501
+field3 926
+field4 926
+field5 2764
+AP:11544
+
+update: post1 to post2
+parse file:0.005634379
+FW:0.012255288
+VxLAN:0.058967959
+VC:0.014840456
+VNI:0.015823577
+EPG:0.028127213
+GBP:152.196099584
+PBR:0.036189836
+update model:152.362433954
+reach size:275109
+property check:185.073833536
+total:337.43626749
+field0 5502
+field1 927
+field2 501
+field3 926
+field4 926
+field5 2764
+AP:11546
+
+update: post2 to post3
+parse file:0.002080143
+FW:0.014937847
+VxLAN:0.073773618
+VC:0.013178909
+VNI:0.017689721
+EPG:0.029491435
+GBP:170.883375355
+PBR:3.29211E-4
+update model:171.032886904
+reach size:275130
+property check:118.753450053
+total:289.786336957
+field0 5503
+field1 927
+field2 501
+field3 926
+field4 926
+field5 2764
+AP:11547
+
+update: post3 to post4
+parse file:0.0078031
+FW:0.05853729
+VxLAN:0.312784956
+VC:0.015606767
+VNI:0.029049834
+EPG:0.021884001
+GBP:203.953923864
+PBR:3.16193E-4
+update model:204.392279018
+reach size:275592
+property check:116.091937842
+total:320.48421686
+field0 5514
+field1 927
+field2 502
+field3 926
+field4 926
+field5 2764
+AP:11559

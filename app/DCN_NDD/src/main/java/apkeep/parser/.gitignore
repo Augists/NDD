@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+/CiscoParser.class
+/DeviceParser.class
+/FWRule.class
+/InterfaceConfig.class
+/NetworkConfig.class
+/NetworkParser.class
+/ParseTools.class
+/RouterConfig.class
+/HuaweiParser.class
+/Huawei_parser.class
+/Interface.class
+/DeviceConfig.class
+/Route.class
+/TencentParser.class
+/DeltaParser.class
+=======
+/CiscoParser.class
+/DeviceParser.class
+/FWRule.class
+/InterfaceConfig.class
+/NetworkConfig.class
+/NetworkParser.class
+/ParseTools.class
+/RouterConfig.class
+/HuaweiParser.class
+/Huawei_parser.class
+/Interface.class
+/DeviceConfig.class
+/Route.class
+/TencentParser.class
+>>>>>>> upstream/master
+/TencentParserLegacy.class

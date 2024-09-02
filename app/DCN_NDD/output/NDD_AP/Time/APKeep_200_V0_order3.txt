@@ -1,0 +1,125 @@
+FW:23.932331955
+VxLAN:79.123433705
+VC:1.447548982
+VNI:12.504357239
+EPG:1.121871409
+GBP:1.824640422
+PBR:1.23167E-4
+update model:208.532093821
+reach size:110000
+property check:43.473206091
+total:252.005299912
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+node for APs:69934
+memory:4014MB
+
+update: base to post0
+parse file:0.003386009
+FW:0.01152601
+VxLAN:0.034111124
+VC:0.012787897
+VNI:0.010550183
+EPG:0.015997579
+GBP:2.506942165
+PBR:9.1952E-5
+update model:2.59211745
+reach size:110088
+property check:31.043434833
+total:33.635552283
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+
+update: post0 to post1
+parse file:0.002374494
+FW:1.7116E-5
+VxLAN:5.47013E-4
+VC:1.9483E-4
+VNI:9.6493E-5
+EPG:0.02879665
+GBP:5.14689047
+PBR:9.4814E-5
+update model:5.176776374
+reach size:110088
+property check:26.788486272
+total:31.965262646
+field0 2201
+field1 369
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4623
+
+update: post1 to post2
+parse file:0.003597633
+FW:0.01168442
+VxLAN:0.034637208
+VC:0.005903588
+VNI:0.006656696
+EPG:0.021696959
+GBP:9.258092514
+PBR:0.020517625
+update model:9.359335727
+reach size:110109
+property check:35.47017265
+total:44.829508377
+field0 2202
+field1 370
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4625
+
+update: post2 to post3
+parse file:0.003768285
+FW:0.015550897
+VxLAN:0.031303036
+VC:0.006348981
+VNI:0.007764864
+EPG:0.012135339
+GBP:9.462866957
+PBR:3.72195E-4
+update model:9.536508149
+reach size:110130
+property check:35.548493001
+total:45.08500115
+field0 2203
+field1 370
+field2 201
+field3 369
+field4 369
+field5 1114
+AP:4626
+
+update: post3 to post4
+parse file:0.010526729
+FW:0.117480717
+VxLAN:0.181969434
+VC:0.006053518
+VNI:0.017745059
+EPG:0.008055558
+GBP:13.445655215
+PBR:1.08085E-4
+update model:13.777225119
+reach size:110592
+property check:49.743349023
+total:63.520574142
+field0 2214
+field1 370
+field2 202
+field3 369
+field4 369
+field5 1114
+AP:4638

@@ -1,0 +1,2 @@
+Leaf-0-0_tp_segment permit Leaf-0-0_vpn1 inport
+Leaf-0-0_vpn1 vbdif1 Leaf-0-0_bd1 inport

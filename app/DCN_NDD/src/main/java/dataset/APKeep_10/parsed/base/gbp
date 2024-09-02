@@ -1,0 +1,300 @@
++ gbp leaf-0-4_tp_segment 40011 40010 permit
++ policy leaf-0-0_tp_segment vpn1 in
++ gbp leaf-0-8_tp_segment 40006 40007 permit
++ gbp leaf-0-9_tp_segment 40010 40011 permit
++ policy leaf-0-8_tp_segment vpn1 in
++ policy leaf-0-6_tp_segment vpn5 in
++ policy leaf-0-7_tp_segment vpn3 in
++ gbp leaf-0-4_tp_segment 40008 40009 permit
++ policy leaf-0-5_tp_segment vpn7 in
++ gbp leaf-0-5_tp_segment 40006 40007 permit
++ policy leaf-0-4_tp_segment vpn9 in
++ gbp leaf-0-1_tp_segment 40008 40009 permit
++ gbp leaf-0-7_tp_segment 40011 40010 permit
++ gbp leaf-0-7_tp_segment 40008 40009 permit
++ gbp leaf-0-1_tp_segment 40011 40010 permit
++ policy leaf-0-1_tp_segment vpn4 in
++ gbp leaf-0-7_tp_segment 40005 40004 permit
++ gbp leaf-0-3_tp_segment 40010 40011 permit
++ gbp leaf-0-0_tp_segment 40010 40011 permit
++ policy leaf-0-2_tp_segment vpn8 in
++ gbp leaf-0-4_tp_segment 40005 40004 permit
++ policy leaf-0-7_tp_segment vpn9 in
++ policy leaf-0-4_tp_segment vpn4 in
++ gbp leaf-0-2_tp_segment 40009 40008 permit
++ gbp leaf-0-6_tp_segment 40010 40011 permit
++ policy leaf-0-3_tp_segment vpn0 in
++ policy leaf-0-9_tp_segment vpn5 in
++ policy leaf-0-6_tp_segment vpn0 in
++ gbp leaf-0-1_tp_segment 40005 40004 permit
++ gbp leaf-0-9_tp_segment 40004 40005 permit
++ gbp leaf-0-5_tp_segment 40009 40008 permit
++ gbp leaf-0-8_tp_segment 40009 40008 permit
++ gbp leaf-0-6_tp_segment 40004 40005 permit
++ gbp leaf-0-3_tp_segment 40002 40003 permit
++ policy leaf-0-1_tp_segment vpn5 in
++ policy leaf-0-2_tp_segment vpn7 in
++ policy leaf-0-0_tp_segment vpn7 in
++ gbp leaf-0-7_tp_segment 40016 40013 permit
++ gbp leaf-0-4_tp_segment 40014 40015 permit
++ policy leaf-0-3_tp_segment vpn5 in
++ policy leaf-0-9_tp_segment vpn4 in
++ gbp leaf-0-1_tp_segment 40016 40013 permit
++ policy leaf-0-8_tp_segment vpn2 in
++ gbp leaf-0-2_tp_segment 40001 40000 permit
++ gbp leaf-0-9_tp_segment 40013 40012 permit
++ gbp leaf-0-9_tp_segment 40013 40016 permit
++ gbp leaf-0-6_tp_segment 40015 40014 permit
++ gbp leaf-0-8_tp_segment 40001 40008 permit
++ gbp leaf-0-8_tp_segment 40001 40000 permit
++ gbp leaf-0-5_tp_segment 40003 40002 permit
++ gbp leaf-0-7_tp_segment 40008 40001 permit
++ gbp leaf-0-7_tp_segment 40000 40001 permit
++ policy leaf-0-2_tp_segment vpn2 in
++ gbp leaf-0-0_tp_segment 40015 40014 permit
++ gbp leaf-0-1_tp_segment 40008 40001 permit
++ gbp leaf-0-2_tp_segment 40001 40008 permit
++ policy leaf-0-0_tp_segment vpn2 in
++ gbp leaf-0-9_tp_segment 40001 40000 permit
++ gbp leaf-0-3_tp_segment 40013 40012 permit
++ gbp leaf-0-3_tp_segment 40013 40016 permit
++ policy leaf-0-7_tp_segment vpn2 in
++ policy leaf-0-8_tp_segment vpn7 in
++ policy leaf-0-5_tp_segment vpn2 in
++ gbp leaf-0-1_tp_segment 40000 40001 permit
++ gbp leaf-0-5_tp_segment 40014 40015 permit
++ gbp leaf-0-9_tp_segment 40009 40008 permit
++ gbp leaf-0-4_tp_segment 40002 40003 permit
++ gbp leaf-0-2_tp_segment 40012 40013 permit
++ gbp leaf-0-6_tp_segment 40007 40006 permit
++ gbp leaf-0-8_tp_segment 40012 40013 permit
++ gbp leaf-0-0_tp_segment 40007 40006 permit
++ gbp leaf-0-3_tp_segment 40005 40004 permit
++ gbp leaf-0-7_tp_segment 40013 40016 permit
++ gbp leaf-0-8_tp_segment 40008 40001 permit
++ gbp leaf-0-3_tp_segment 40009 40008 permit
++ policy leaf-0-1_tp_segment vpn3 in
++ gbp leaf-0-4_tp_segment 40013 40012 permit
++ gbp leaf-0-6_tp_segment 40009 40008 permit
++ policy leaf-0-2_tp_segment vpn9 in
++ policy leaf-0-8_tp_segment vpn8 in
++ policy leaf-0-5_tp_segment vpn3 in
++ gbp leaf-0-2_tp_segment 40010 40011 permit
++ gbp leaf-0-9_tp_segment 40001 40008 permit
++ gbp leaf-0-6_tp_segment 40001 40000 permit
++ gbp leaf-0-5_tp_segment 40008 40001 permit
++ gbp leaf-0-6_tp_segment 40001 40008 permit
++ gbp leaf-0-4_tp_segment 40006 40007 permit
++ policy leaf-0-6_tp_segment vpn9 in
++ gbp leaf-0-1_tp_segment 40013 40012 permit
++ gbp leaf-0-5_tp_segment 40000 40001 permit
++ gbp leaf-0-8_tp_segment 40000 40001 permit
++ gbp leaf-0-3_tp_segment 40016 40013 permit
++ gbp leaf-0-2_tp_segment 40004 40005 permit
++ policy leaf-0-2_tp_segment vpn4 in
++ gbp leaf-0-8_tp_segment 40011 40010 permit
++ policy leaf-0-3_tp_segment vpn4 in
++ gbp leaf-0-0_tp_segment 40016 40013 permit
++ policy leaf-0-1_tp_segment vpn8 in
++ policy leaf-0-0_tp_segment vpn8 in
++ gbp leaf-0-0_tp_segment 40012 40013 permit
++ gbp leaf-0-4_tp_segment 40003 40002 permit
++ policy leaf-0-9_tp_segment vpn9 in
++ policy leaf-0-6_tp_segment vpn4 in
++ gbp leaf-0-7_tp_segment 40003 40002 permit
++ gbp leaf-0-3_tp_segment 40012 40013 permit
++ policy leaf-0-7_tp_segment vpn4 in
++ gbp leaf-0-0_tp_segment 40008 40009 permit
++ policy leaf-0-5_tp_segment vpn8 in
++ policy leaf-0-4_tp_segment vpn8 in
++ gbp leaf-0-5_tp_segment 40011 40010 permit
++ gbp leaf-0-2_tp_segment 40015 40014 permit
++ gbp leaf-0-3_tp_segment 40008 40009 permit
++ gbp leaf-0-9_tp_segment 40006 40007 permit
++ gbp leaf-0-0_tp_segment 40008 40001 permit
++ gbp leaf-0-3_tp_segment 40000 40001 permit
++ policy leaf-0-2_tp_segment vpn3 in
++ policy leaf-0-1_tp_segment vpn9 in
++ policy leaf-0-0_tp_segment vpn3 in
++ gbp leaf-0-6_tp_segment 40002 40003 permit
++ policy leaf-0-7_tp_segment vpn8 in
++ policy leaf-0-4_tp_segment vpn3 in
++ policy leaf-0-9_tp_segment vpn8 in
++ policy leaf-0-6_tp_segment vpn3 in
++ gbp leaf-0-8_tp_segment 40007 40006 permit
++ policy leaf-0-5_tp_segment vpn9 in
++ gbp leaf-0-1_tp_segment 40014 40015 permit
++ gbp leaf-0-1_tp_segment 40009 40008 permit
++ gbp leaf-0-6_tp_segment 40013 40012 permit
++ policy leaf-0-3_tp_segment vpn9 in
++ gbp leaf-0-5_tp_segment 40005 40004 permit
++ gbp leaf-0-9_tp_segment 40015 40014 permit
++ gbp leaf-0-7_tp_segment 40010 40011 permit
++ gbp leaf-0-2_tp_segment 40003 40002 permit
++ gbp leaf-0-7_tp_segment 40006 40007 permit
++ gbp leaf-0-2_tp_segment 40006 40007 permit
++ gbp leaf-0-3_tp_segment 40011 40010 permit
++ gbp leaf-0-4_tp_segment 40004 40005 permit
++ policy leaf-0-9_tp_segment vpn3 in
++ gbp leaf-0-0_tp_segment 40013 40016 permit
++ gbp leaf-0-5_tp_segment 40008 40009 permit
++ policy leaf-0-8_tp_segment vpn3 in
++ gbp leaf-0-1_tp_segment 40002 40003 permit
++ gbp leaf-0-5_tp_segment 40012 40013 permit
++ gbp leaf-0-9_tp_segment 40003 40002 permit
++ gbp leaf-0-5_tp_segment 40016 40013 permit
++ gbp leaf-0-0_tp_segment 40005 40004 permit
++ gbp leaf-0-8_tp_segment 40014 40015 permit
++ gbp leaf-0-3_tp_segment 40007 40006 permit
++ gbp leaf-0-3_tp_segment 40003 40002 permit
++ policy leaf-0-3_tp_segment vpn3 in
++ policy leaf-0-2_tp_segment vpn5 in
++ policy leaf-0-1_tp_segment vpn7 in
++ policy leaf-0-0_tp_segment vpn9 in
++ gbp leaf-0-0_tp_segment 40003 40002 permit
++ gbp leaf-0-7_tp_segment 40015 40014 permit
++ policy leaf-0-7_tp_segment vpn6 in
++ policy leaf-0-4_tp_segment vpn1 in
++ gbp leaf-0-4_tp_segment 40015 40014 permit
++ policy leaf-0-8_tp_segment vpn4 in
++ gbp leaf-0-9_tp_segment 40014 40015 permit
++ gbp leaf-0-5_tp_segment 40002 40003 permit
++ policy leaf-0-9_tp_segment vpn2 in
++ gbp leaf-0-1_tp_segment 40015 40014 permit
++ gbp leaf-0-8_tp_segment 40002 40003 permit
++ gbp leaf-0-6_tp_segment 40014 40015 permit
++ gbp leaf-0-2_tp_segment 40002 40003 permit
++ gbp leaf-0-3_tp_segment 40014 40015 permit
++ gbp leaf-0-4_tp_segment 40001 40000 permit
++ gbp leaf-0-9_tp_segment 40008 40001 permit
++ policy leaf-0-0_tp_segment vpn4 in
++ gbp leaf-0-7_tp_segment 40001 40000 permit
++ policy leaf-0-3_tp_segment vpn8 in
++ policy leaf-0-8_tp_segment vpn9 in
++ policy leaf-0-5_tp_segment vpn4 in
++ policy leaf-0-7_tp_segment vpn0 in
++ gbp leaf-0-0_tp_segment 40014 40015 permit
++ policy leaf-0-2_tp_segment vpn0 in
++ gbp leaf-0-9_tp_segment 40000 40001 permit
++ gbp leaf-0-0_tp_segment 40006 40007 permit
++ policy leaf-0-6_tp_segment vpn8 in
++ gbp leaf-0-7_tp_segment 40001 40008 permit
++ gbp leaf-0-9_tp_segment 40008 40009 permit
++ gbp leaf-0-6_tp_segment 40008 40001 permit
++ gbp leaf-0-3_tp_segment 40008 40001 permit
++ gbp leaf-0-4_tp_segment 40001 40008 permit
++ gbp leaf-0-1_tp_segment 40001 40000 permit
++ gbp leaf-0-2_tp_segment 40013 40012 permit
++ gbp leaf-0-5_tp_segment 40013 40016 permit
++ gbp leaf-0-3_tp_segment 40006 40007 permit
++ gbp leaf-0-8_tp_segment 40013 40012 permit
++ gbp leaf-0-8_tp_segment 40013 40016 permit
++ gbp leaf-0-1_tp_segment 40001 40008 permit
++ gbp leaf-0-5_tp_segment 40013 40012 permit
++ gbp leaf-0-2_tp_segment 40013 40016 permit
++ gbp leaf-0-7_tp_segment 40012 40013 permit
++ gbp leaf-0-0_tp_segment 40000 40001 permit
++ gbp leaf-0-6_tp_segment 40000 40001 permit
++ gbp leaf-0-8_tp_segment 40005 40004 permit
++ policy leaf-0-5_tp_segment vpn5 in
++ policy leaf-0-4_tp_segment vpn7 in
++ policy leaf-0-6_tp_segment vpn7 in
++ policy leaf-0-7_tp_segment vpn5 in
++ gbp leaf-0-5_tp_segment 40007 40006 permit
++ gbp leaf-0-1_tp_segment 40007 40006 permit
++ gbp leaf-0-1_tp_segment 40012 40013 permit
++ gbp leaf-0-2_tp_segment 40005 40004 permit
++ gbp leaf-0-4_tp_segment 40009 40008 permit
++ gbp leaf-0-4_tp_segment 40010 40011 permit
++ policy leaf-0-3_tp_segment vpn2 in
++ gbp leaf-0-2_tp_segment 40008 40009 permit
++ gbp leaf-0-0_tp_segment 40011 40010 permit
++ gbp leaf-0-8_tp_segment 40016 40013 permit
++ policy leaf-0-1_tp_segment vpn2 in
++ policy leaf-0-7_tp_segment vpn7 in
++ policy leaf-0-4_tp_segment vpn2 in
++ gbp leaf-0-7_tp_segment 40004 40005 permit
++ gbp leaf-0-6_tp_segment 40011 40010 permit
++ policy leaf-0-9_tp_segment vpn7 in
++ policy leaf-0-6_tp_segment vpn2 in
++ gbp leaf-0-8_tp_segment 40008 40009 permit
++ gbp leaf-0-1_tp_segment 40004 40005 permit
++ gbp leaf-0-5_tp_segment 40010 40011 permit
++ gbp leaf-0-2_tp_segment 40016 40013 permit
++ gbp leaf-0-6_tp_segment 40003 40002 permit
++ gbp leaf-0-9_tp_segment 40005 40004 permit
++ policy leaf-0-0_tp_segment vpn5 in
++ policy leaf-0-3_tp_segment vpn7 in
++ policy leaf-0-4_tp_segment vpn5 in
++ gbp leaf-0-7_tp_segment 40013 40012 permit
++ gbp leaf-0-3_tp_segment 40001 40000 permit
++ gbp leaf-0-0_tp_segment 40001 40000 permit
++ policy leaf-0-2_tp_segment vpn1 in
++ gbp leaf-0-3_tp_segment 40001 40008 permit
++ gbp leaf-0-1_tp_segment 40006 40007 permit
++ gbp leaf-0-2_tp_segment 40008 40001 permit
++ policy leaf-0-9_tp_segment vpn6 in
++ policy leaf-0-6_tp_segment vpn1 in
++ gbp leaf-0-9_tp_segment 40012 40013 permit
++ gbp leaf-0-5_tp_segment 40004 40005 permit
++ gbp leaf-0-4_tp_segment 40013 40016 permit
++ gbp leaf-0-1_tp_segment 40013 40016 permit
++ gbp leaf-0-8_tp_segment 40004 40005 permit
++ gbp leaf-0-9_tp_segment 40016 40013 permit
++ gbp leaf-0-6_tp_segment 40016 40013 permit
++ policy leaf-0-4_tp_segment vpn0 in
++ gbp leaf-0-7_tp_segment 40007 40006 permit
++ gbp leaf-0-8_tp_segment 40015 40014 permit
++ policy leaf-0-1_tp_segment vpn0 in
++ gbp leaf-0-2_tp_segment 40000 40001 permit
++ gbp leaf-0-6_tp_segment 40012 40013 permit
++ gbp leaf-0-2_tp_segment 40007 40006 permit
++ policy leaf-0-0_tp_segment vpn0 in
++ policy leaf-0-8_tp_segment vpn0 in
++ policy leaf-0-8_tp_segment vpn5 in
++ policy leaf-0-5_tp_segment vpn0 in
++ gbp leaf-0-9_tp_segment 40002 40003 permit
++ policy leaf-0-9_tp_segment vpn1 in
++ gbp leaf-0-0_tp_segment 40004 40005 permit
++ gbp leaf-0-5_tp_segment 40015 40014 permit
++ gbp leaf-0-1_tp_segment 40003 40002 permit
++ gbp leaf-0-2_tp_segment 40011 40010 permit
++ gbp leaf-0-6_tp_segment 40006 40007 permit
++ gbp leaf-0-7_tp_segment 40014 40015 permit
++ policy leaf-0-3_tp_segment vpn1 in
++ gbp leaf-0-4_tp_segment 40016 40013 permit
++ gbp leaf-0-6_tp_segment 40008 40009 permit
++ gbp leaf-0-3_tp_segment 40004 40005 permit
++ gbp leaf-0-9_tp_segment 40011 40010 permit
++ policy leaf-0-1_tp_segment vpn1 in
++ policy leaf-0-8_tp_segment vpn6 in
++ gbp leaf-0-0_tp_segment 40002 40003 permit
++ policy leaf-0-7_tp_segment vpn1 in
++ policy leaf-0-5_tp_segment vpn1 in
++ gbp leaf-0-1_tp_segment 40010 40011 permit
++ policy leaf-0-9_tp_segment vpn0 in
++ gbp leaf-0-4_tp_segment 40007 40006 permit
++ gbp leaf-0-4_tp_segment 40012 40013 permit
++ gbp leaf-0-5_tp_segment 40001 40000 permit
++ gbp leaf-0-8_tp_segment 40003 40002 permit
++ gbp leaf-0-7_tp_segment 40009 40008 permit
++ gbp leaf-0-7_tp_segment 40002 40003 permit
++ policy leaf-0-1_tp_segment vpn6 in
++ gbp leaf-0-4_tp_segment 40008 40001 permit
++ gbp leaf-0-6_tp_segment 40013 40016 permit
++ gbp leaf-0-8_tp_segment 40010 40011 permit
++ gbp leaf-0-5_tp_segment 40001 40008 permit
++ policy leaf-0-2_tp_segment vpn6 in
++ gbp leaf-0-3_tp_segment 40015 40014 permit
++ policy leaf-0-0_tp_segment vpn6 in
++ gbp leaf-0-0_tp_segment 40001 40008 permit
++ policy leaf-0-3_tp_segment vpn6 in
++ policy leaf-0-4_tp_segment vpn6 in
++ gbp leaf-0-0_tp_segment 40013 40012 permit
++ policy leaf-0-5_tp_segment vpn6 in
++ gbp leaf-0-9_tp_segment 40007 40006 permit
++ policy leaf-0-6_tp_segment vpn6 in
++ gbp leaf-0-0_tp_segment 40009 40008 permit
++ gbp leaf-0-4_tp_segment 40000 40001 permit
++ gbp leaf-0-6_tp_segment 40005 40004 permit
++ gbp leaf-0-2_tp_segment 40014 40015 permit

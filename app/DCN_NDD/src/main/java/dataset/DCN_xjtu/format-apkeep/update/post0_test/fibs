@@ -1,0 +1,5 @@
+- fwd leaf1 100003 32 port1 32
+- fwd core1 100003 32 port3 32
+- fwd leaf3 100003 32 vxlan 32
+- fwd leaf1_vpn3 300000 24 vxlan 24
+- fwd leaf3_vpn3 300000 24 vbdif3 24

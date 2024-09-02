@@ -1,0 +1,9 @@
++ fwd leaf1 100002 32 port1 32
++ fwd leaf1 100003 32 port1 32
++ fwd core1 100002 32 port2 32
++ fwd core1 100003 32 port3 32
++ fwd leaf2 100002 32 vxlan 32
++ fwd leaf3 100003 32 vxlan 32
++ fwd leaf1_vpn1 200000 24 vxlan 24
++ fwd leaf2_vpn1 200000 24 vbdif1 24
++ fwd leaf3_vpn1 200000 24 vbdif1 24

@@ -1,0 +1,8 @@
+------------------------------------------------------------------------------
+Routing Table : vpn1 
+         Destinations : NA      Routes : NA
+
+Destination/Mask          Proto   Pre  Cost Flags              NextHop            Interface
+      30.1.31.101/32      local     0     0    NA            127.0.0.1       10GE1/0/0.4000
+        30.1.31.0/24  connected     0     0    NA          30.1.31.101       10GE1/0/0.4000
+           0.0.0.0/0     static    60     0    NA          30.1.31.100       10GE1/0/0.4000

@@ -1,0 +1,20 @@
+FW:5.987956706
+VxLAN:16.776067121
+VC:0.232604077
+VNI:2.807111947
+EPG:0.26737123
+GBP:0.03293123
+PBR:9.6216E-5
+update model:30.829140176
+reach size:27500
+property check:3.713314907
+total:34.542455083
+field0 551
+field1 88
+field2 51
+field3 88
+field4 88
+field5 189
+AP:1055
+node for APs:18355
+memory:1360MB

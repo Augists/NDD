@@ -1,0 +1,4 @@
+vpn20 Core-0-0_vpn20 vpn9 Core-0-0_vpn9
+vpn9 Core-0-1_vpn9 vpn20 Core-0-1_vpn20
+vpn9 Core-0-0_vpn9 vpn20 Core-0-0_vpn20
+vpn20 Core-0-1_vpn20 vpn9 Core-0-1_vpn9

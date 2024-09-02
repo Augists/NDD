@@ -1,0 +1,14 @@
+------------------------------------------------------------------------------
+Routing Table : _public_ 
+         Destinations : NA      Routes : NA
+
+Destination/Mask          Proto   Pre  Cost Flags              NextHop            Interface
+        40.0.40.1/32  connected     0     0    NA            127.0.0.1            LoopBack0
+------------------------------------------------------------------------------
+Routing Table : vpn1 
+         Destinations : NA      Routes : NA
+
+Destination/Mask          Proto   Pre  Cost Flags              NextHop            Interface
+      40.1.31.101/32      local     0     0    NA            127.0.0.1       10GE1/0/1.4000
+        40.1.31.0/24  connected     0     0    NA          40.1.31.101       10GE1/0/1.4000
+           0.0.0.0/0     static    60     0    NA          40.1.31.100       10GE1/0/1.4000

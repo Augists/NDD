@@ -1,0 +1,26 @@
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn16 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn14 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn9 in
++ policy Leaf-0-0_tp_pbr_1 Leaf-0-0 vpn1 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn7 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn20 in
++ pbr Leaf-0-0_tp_pbr_1 access-list acl1 permit 0 255 10.0.1.1 0.0.0.255 null null 10.0.45.0 0.0.0.255 null null  redirect
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn11 in
++ redirect Core-0-0_tp_pv_pbr_global Core-0-0_vpn1 in redirect vpn1 30.1.31.101
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn13 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn5 in
++ redirect Leaf-0-0_tp_pbr_1 Leaf-0-0_vpn1 in redirect vpn1 30.1.31.101
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn3 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn17 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn1 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn19 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn15 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn6 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn8 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn21 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn2 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn10 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn12 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn18 in
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 vpn4 in
++ pbr Core-0-0_tp_pv_pbr_global access-list acl1 permit 0 255 10.0.1.1 0.0.0.255 null null 10.0.45.0 0.0.0.255 null null  redirect

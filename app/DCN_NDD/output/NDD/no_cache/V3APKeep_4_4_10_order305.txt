@@ -1,0 +1,26 @@
+FW:0.058497353
+VxLAN:0.035610185
+VC:4.0633E-4
+VNI:0.022713495
+EPG:0.011425286
+GBP:5.6403E-4
+PBR:0.007951366
+update model:0.137225062
+NDD time:0.005437365
+EncapSrcEPGtime 1:1.11834E-4
+EncapSrcEPGtime 2:7.8466E-5
+EncapVNItime:1.8789E-4
+EncapIPtime:9.73581E-4
+Phytime:0.001706055
+Virtime:8.8993E-5
+DecapIPtime:5.8787E-4
+VCtime:4.43242E-4
+DecapVNItime:1.39336E-4
+EncapDstEPGtime:4.1052E-4
+DecapEPGtime:1.15798E-4
+NDD node:800
+BDD node:0
+reach size:272
+property check:0.016874572
+total:0.154099634
+memory:1183MB

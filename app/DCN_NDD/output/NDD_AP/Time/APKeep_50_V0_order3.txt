@@ -1,0 +1,125 @@
+FW:1.970149697
+VxLAN:4.842529118
+VC:0.082739926
+VNI:0.974025303
+EPG:0.067921697
+GBP:0.033495836
+PBR:1.04688E-4
+update model:12.839394106
+reach size:27500
+property check:3.70464332
+total:16.544037426
+field0 551
+field1 94
+field2 51
+field3 94
+field4 94
+field5 289
+AP:1173
+node for APs:19775
+memory:1370MB
+
+update: base to post0
+parse file:0.002587611
+FW:0.004426768
+VxLAN:0.017790232
+VC:0.002715349
+VNI:0.003198429
+EPG:0.003696316
+GBP:0.075863267
+PBR:7.3954E-5
+update model:0.107861556
+reach size:27588
+property check:2.429155463
+total:2.537017019
+field0 551
+field1 94
+field2 51
+field3 94
+field4 94
+field5 289
+AP:1173
+
+update: post0 to post1
+parse file:0.001278772
+FW:6.576E-6
+VxLAN:2.24897E-4
+VC:4.5483E-5
+VNI:3.5186E-5
+EPG:0.004300216
+GBP:0.055529665
+PBR:7.0592E-5
+update model:0.060322377
+reach size:27588
+property check:2.673948593
+total:2.73427097
+field0 551
+field1 94
+field2 51
+field3 94
+field4 94
+field5 289
+AP:1173
+
+update: post1 to post2
+parse file:0.003232348
+FW:0.003025742
+VxLAN:0.016399257
+VC:0.00276155
+VNI:0.002442299
+EPG:0.006214621
+GBP:0.077706574
+PBR:0.003847135
+update model:0.112526647
+reach size:27609
+property check:2.187195699
+total:2.299722346
+field0 552
+field1 94
+field2 51
+field3 94
+field4 94
+field5 289
+AP:1174
+
+update: post2 to post3
+parse file:0.001907178
+FW:0.003360826
+VxLAN:0.014021689
+VC:0.001850271
+VNI:0.002426467
+EPG:0.004077827
+GBP:0.064905523
+PBR:7.0231E-5
+update model:0.090836544
+reach size:27630
+property check:2.223354246
+total:2.31419079
+field0 553
+field1 94
+field2 51
+field3 94
+field4 94
+field5 289
+AP:1175
+
+update: post3 to post4
+parse file:0.004632522
+FW:0.027262522
+VxLAN:0.070205363
+VC:0.001922162
+VNI:0.009381883
+EPG:0.003847874
+GBP:0.086093395
+PBR:7.4885E-5
+update model:0.198885838
+reach size:28092
+property check:2.461325867
+total:2.660211705
+field0 564
+field1 94
+field2 52
+field3 94
+field4 94
+field5 289
+AP:1187

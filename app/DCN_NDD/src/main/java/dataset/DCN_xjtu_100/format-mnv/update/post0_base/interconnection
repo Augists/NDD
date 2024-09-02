@@ -1,0 +1,4 @@
+vpn49 Core-0-1_vpn49 vpn100 Core-0-1_vpn100
+vpn100 Core-0-0_vpn100 vpn49 Core-0-0_vpn49
+vpn49 Core-0-0_vpn49 vpn100 Core-0-0_vpn100
+vpn100 Core-0-1_vpn100 vpn49 Core-0-1_vpn49
