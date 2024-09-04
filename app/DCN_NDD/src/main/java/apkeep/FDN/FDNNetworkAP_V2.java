@@ -1021,7 +1021,7 @@ public class FDNNetworkAP_V2 extends FDNNetworkV2 {
         System.out.println(args[0] + " " + args[1]);
         orderPlan = Integer.parseInt(args[1]);
 
-        fw = new FileWriter("/home/zcli/lzc/Field-Decision-Network/DCN_NDD/output/NDD_AP/" + args[0] + "_order"
+        fw = new FileWriter(path + "/DCN_NDD/output/NDD_AP/" + args[0] + "_order"
                 + orderPlan + ".txt", false);
         pw = new PrintWriter(fw);
 

@@ -358,7 +358,8 @@ public class Checker {
     }
 
     public void print_to_file(String fileName) throws IOException {
-        FileWriter fw = new FileWriter("/home/zcli/lzc/Field-Decision-Network/apkatra-main/pic/" + fileName, false);
+        path = "Field-Decision-Network"
+        FileWriter fw = new FileWriter(path + "/apkatra-main/pic/" + fileName, false);
         PrintWriter pw = new PrintWriter(fw);
         HashMap<String, HashSet<String>> map = new HashMap<>();
         for (String str : reach) {

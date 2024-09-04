@@ -21,8 +21,6 @@ public class ChangeItem {
 	@Override
 	public boolean equals(Object o) {
 		if(o instanceof ChangeItem) {
-//			System.out.println("in judge!!!!!!!!!!!!!!!");
-//			System.out.println(o);
 			ChangeItem another = (ChangeItem) o;
 			if(!another.from_port.equals(from_port)) return false;
 			if(!another.to_port.equals(to_port)) return false;

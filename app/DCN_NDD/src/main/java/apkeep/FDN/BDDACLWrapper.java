@@ -215,7 +215,8 @@ public class BDDACLWrapper implements Serializable {
 	}
 
 	private void DeclareFields(int orderPlan) throws IOException {
-		ArrayList<String> orders = ExperimentTools.readFromFile("/home/zcli/lzc/Field-Decision-Network/apkatra-main/src/main/java/dataset/fieldOrder");
+        path = "Field-Decision-Network"
+		ArrayList<String> orders = ExperimentTools.readFromFile(path + "/apkatra-main/src/main/java/dataset/fieldOrder");
 		String chosen = orders.get(orderPlan-1);
 		String [] tokens = chosen.split(" ");
 		for(int i=0;i<=5;i++)

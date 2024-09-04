@@ -78,7 +78,8 @@ public class FDNNetworkV2 extends FDNNetwork {
         pw.println("total:" + (t4 - t2) / 1000000000);
         pw.flush();
 
-        FileWriter f = new FileWriter("/home/zcli/lzc/Field-Decision-Network/DCN_NDD/output/NDD/no_cache/allOrder",true);
+        path = "Field-Decision-Network"
+        FileWriter f = new FileWriter(path + "/DCN_NDD/output/NDD/no_cache/allOrder",true);
         PrintWriter p = new PrintWriter(f);
         p.println(orderPlan+" "+ NDD.Time / 1000000000.0 + " " + NDD.getMKCount() + " " +NodeTable.mkCount+" "+checkerV2.reach.size());
         p.flush();
@@ -86,7 +87,8 @@ public class FDNNetworkV2 extends FDNNetwork {
 
     void NDDOrder(int orderPlan) throws IOException
     {
-		ArrayList<String> orders = ExperimentTools.readFromFile("/home/zcli/lzc/Field-Decision-Network/apkatra-main/src/main/java/dataset/fieldOrder");
+        path = "Field-Decision-Network"
+		ArrayList<String> orders = ExperimentTools.readFromFile(path + "/apkatra-main/src/main/java/dataset/fieldOrder");
 		String chosen = orders.get(orderPlan-1);
 		String [] tokens = chosen.split(" ");
         int [] upperBound = new int [field_num];
@@ -199,7 +201,8 @@ public class FDNNetworkV2 extends FDNNetwork {
         System.out.println(args[0]+" "+args[1]);
         orderPlan = Integer.parseInt(args[1]);
 
-        fw = new FileWriter("/home/zcli/lzc/Field-Decision-Network/DCN_NDD/output/NDD/no_cache/" + args[0] + "_order" + orderPlan + ".txt",
+        path = "Field-Decision-Network"
+        fw = new FileWriter(path + "/DCN_NDD/output/NDD/no_cache/" + args[0] + "_order" + orderPlan + ".txt",
                 false);
         pw = new PrintWriter(fw);
 

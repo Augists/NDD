@@ -70,10 +70,6 @@ public abstract class RewriteRule{
 	}
 	public int apply_rewrite(int old_pkt, int exists_quant, int new_val)
 	{
-		;
-//		int tmp1 = _baw.ref(_baw.(old_pkt, exists_quant));
-//		int res = _baw.ref(_baw.and(tmp1, new_val));//做了一个交集运算
-//		_baw.deref(tmp1);
 		return _baw.apply_rewrite(old_pkt,exists_quant,new_val);
 	}
 	public abstract int applyRewrite(int pkt);

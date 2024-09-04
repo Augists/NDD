@@ -51,7 +51,6 @@ public class FDNNetworkGate extends FDNNetwork {
         affected_aps = NDD.NDDTrue;
 
         double t3 = System.nanoTime();
-        // System.out.println("update model:" + (t3 - t2) / 1000000000);
         pw.println("update model:" + (t3 - t2) / 1000000000);
         pw.flush();
 
@@ -184,7 +183,8 @@ public class FDNNetworkGate extends FDNNetwork {
 
     public static void main(String[] args) throws Exception {
         // System.out.println(System.getProperty("java.version"));
-        fw = new FileWriter("/home/zcli/lzc/Field-Decision-Network/DCN_NDD/output/NDD/no_cache/" + args[0] + ".txt",
+        path = "Field-Decision-Network"
+        fw = new FileWriter(path + "/DCN_NDD/output/NDD/no_cache/" + args[0] + ".txt",
                 false);
         pw = new PrintWriter(fw);
 

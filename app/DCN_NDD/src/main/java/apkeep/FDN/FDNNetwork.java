@@ -113,7 +113,8 @@ public class FDNNetwork {
         nat_element_names = new HashSet<String>();
 
         String tinytopo = dataset + "/";
-        String root = "/home/zcli/lzc/Field-Decision-Network/apkatra-main/src/main/java/dataset/";
+        String path = "Field-Decision-Network/"
+        String root = path + "/apkatra-main/src/main/java/dataset/";
 
         if (dataset.startsWith("APKeep") || dataset.startsWith("GateAPKeep") || dataset.startsWith("V2")
                 || dataset.startsWith("V3")) {
@@ -176,7 +177,8 @@ public class FDNNetwork {
         NDD.bdd = bdd_engine.getBDD();
 
         String tinytopo = dataset + "/";
-        String root = "/home/zcli/lzc/Field-Decision-Network/apkatra-main/src/main/java/dataset/";
+        String path = "Field-Decision-Network/"
+        String root = path + "/apkatra-main/src/main/java/dataset/";
 
         if (dataset.startsWith("APKeep") || dataset.startsWith("NewAPKeep")) {
             parsedRoot = root + tinytopo + "parsed/";
@@ -1349,7 +1351,8 @@ public class FDNNetwork {
 
     public static void main(String[] args) throws Exception {
         // System.out.println(System.getProperty("java.version"));
-        fw = new FileWriter("/home/zcli/lzc/Field-Decision-Network/DCN_NDD/output/NDD/no_cache/" + args[0] + ".txt",
+        path = "Field-Decision-Network"
+        fw = new FileWriter(path + "/DCN_NDD/output/NDD/no_cache/" + args[0] + ".txt",
                 false);
         pw = new PrintWriter(fw);
 

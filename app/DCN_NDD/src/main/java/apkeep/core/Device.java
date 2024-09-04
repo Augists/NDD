@@ -92,7 +92,6 @@ public class Device {
 			policy_set = new HashSet<String>();
 		}
 		policy_set.add(policy);
-//		if(interface_name.equals("Vlan796")) System.out.println(name+" "+interface_name+" "+acl);
 		in_policy.put(interface_name, policy_set);
 	}
 	public void addInACL(String interface_name, String acl) {
@@ -102,7 +101,6 @@ public class Device {
 			aclset = new HashSet<String>();
 		}
 		aclset.add(acl);
-//		if(interface_name.equals("Vlan796")) System.out.println(name+" "+interface_name+" "+acl);
 		getIn_acl().put(interface_name, aclset);
 	}
 
@@ -120,7 +118,6 @@ public class Device {
 			aclset = new HashSet<String>();
 		}
 		aclset.add(acl);
-//		if(acl.equals("5")) System.out.println(name+" "+interface_name+" "+acl);
 		getOut_acl().put(interface_name, aclset);
 	}
 	public void addOutACL(Collection<String> vlanInterface, String acl) {
