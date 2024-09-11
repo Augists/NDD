@@ -1,5 +1,11 @@
 package ndd;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,7 +13,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import javafx.util.Pair;
+
 import jdd.bdd.BDD;
+import jdd.util.Dot;
 
 public class NDD {
     public static int fieldNum;
@@ -858,4 +866,58 @@ public class NDD {
             printOutRec(next);
         }
     }
+
+    private static PrintStream ps;
+    private static HashMap<Pair<NDD, NDD>, Boolean> printFlag = new HashMap<>();
+
+    // pass a new directory would be better
+    // NDD.printDot will create a dot for NDD and plenty of dots for BDD
+    public static void printDot(String filename, NDD a) {
+        try {
+            ps = new PrintStream(filename);
+
+            ps.println("digraph G {");
+
+            String[] pathList = filename.split("/");
+            String path = String.join("/", Arrays.copyOfRange(pathList, 0, pathList.length - 1));
+            printDotRec(path + "/", a);
+
+            ps.println("1 [shape=box, label=\"" + "true" + "\", style=filled, shape=box, height=0.3, width=0.3];");
+            ps.println("}");
+            ps.close();
+
+            Dot.showDot(filename);
+        } catch (IOException exx) {
+            System.out.println("NDD.printDOT failed: " + exx);
+        }
+    }
+
+    private static void printDotRec(String path, NDD a) throws IOException {
+        ps.println(a.hashCode() + "[label=\"f" + a.field + "\"];");
+
+        for (NDD next : a.edges.keySet()) {
+            Pair<NDD, NDD> p = new Pair<NDD, NDD>(a, next);
+            if (printFlag.containsKey(p)) {
+                continue;
+            }
+            printFlag.put(p, true);
+            int idx = a.edges.get(next);
+
+            String bdd_path = path + idx;
+            File file = new File(bdd_path + ".png");
+            if (!file.exists()) {
+                file.createNewFile();
+                bdd.printDot(bdd_path, idx);
+            }
+
+            if (next.is_True()) {
+                ps.println(a.hashCode() + " -> " + 1 + " [style=filled label=" + idx + "];");
+                continue;
+            }
+            ps.println(a.hashCode() + " -> " + next.hashCode() + " [style=filled label=" + idx + "];");
+
+            NDD.printDotRec(path, next);
+        }
+    }
+
 }
