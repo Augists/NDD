@@ -1,4 +1,4 @@
-package ndd;
+package bddvector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.Set;
 
 import jdd.bdd.BDD;
 
-public class NDD {
+public class BDDVector {
     public static int fieldNum;
 
     public static int[] upperBound;
@@ -17,13 +17,18 @@ public class NDD {
     public static int varNumTotal;
     public static int maxVarsLength; // = varNumTotal if not reuse
 
-    public static NDD NDDTrue = new NDD(true);
-    public static NDD NDDFalse = new NDD(false);
+    public static BDDVector VectorTrue = new BDDVector(true);
+    public static BDDVector VectorFalse = new BDDVector(false);
     public static BDD bdd;
 
     public static int[] vars;
     public static int[] otherVars; // convert between bdd and vector
 
+    /*
+     * reuse flag (default true)
+     *   reuse bdd elements in vector
+     *   initialize with reverse order
+     */
     public static boolean reuse = true;
 
     public Set<ArrayList<Integer>> vectors;
@@ -56,12 +61,12 @@ public class NDD {
         fieldNum = num;
 
         // lazy init for NDD True [1, 1, 1] and False [0, 0, 0]
-        for (ArrayList<Integer> vector : NDDTrue.vectors) {
+        for (ArrayList<Integer> vector : VectorTrue.vectors) {
             for (int i = 0; i < fieldNum; i++) {
                 vector.add(1);
             }
         }
-        for (ArrayList<Integer> vector : NDDFalse.vectors) {
+        for (ArrayList<Integer> vector : VectorFalse.vectors) {
             for (int i = 0; i < fieldNum; i++) {
                 vector.add(0);
             }
@@ -80,23 +85,23 @@ public class NDD {
         }
     }
 
-    public NDD() {
+    public BDDVector() {
         vectors = new HashSet<>();
     }
 
-    public NDD(boolean flag) {
-        // lazy init NDD True and False
+    public BDDVector(boolean flag) {
+        // lazy init BDDVector True and False
         // field = fieldNum + 1;
         vectors = new HashSet<>();
         ArrayList<Integer> vector = new ArrayList<Integer>();
         vectors.add(vector);
     }
 
-    public NDD(Set<ArrayList<Integer>> ret) {
+    public BDDVector(Set<ArrayList<Integer>> ret) {
         vectors = ret;
     }
 
-    public NDD(NDD ret) {
+    public BDDVector(BDDVector ret) {
         // deep copy
         this.vectors = new HashSet<>();
         for (ArrayList<Integer> vector : ret.vectors) {
@@ -107,17 +112,17 @@ public class NDD {
         // ref(this);
     }
 
-    public boolean equals(NDD obj) {
+    public boolean equals(BDDVector obj) {
         if (this.vectors.size() != obj.vectors.size())
             return false;
         return this.vectors == obj.vectors;
     }
 
     public boolean is_True() {
-        // return this == NDDTrue;
-        if (this == NDDTrue) {
+        // return this == VectorTrue;
+        if (this == VectorTrue)
             return true;
-        }
+
         for (ArrayList<Integer> vector : vectors) {
             int i = 0;
             for (; i < vector.size(); i++) {
@@ -133,10 +138,10 @@ public class NDD {
     }
 
     public boolean is_False() {
-        // do not only use pointer compare to judge NDDFalse
-        if (this == NDDFalse) {
+        // do not only use pointer compare to judge VectorFalse
+        if (this == VectorFalse)
             return true;
-        }
+
         // only if every vector has 0 can be regarded as False
         for (ArrayList<Integer> vector : vectors) {
             boolean flag = false;
@@ -152,54 +157,54 @@ public class NDD {
         return true;
     }
 
-    public static NDD ref(NDD ndd) {
-        for (ArrayList<Integer> vector : ndd.vectors) {
+    public static BDDVector ref(BDDVector v) {
+        for (ArrayList<Integer> vector : v.vectors) {
             for (int i = 0; i < vector.size(); i++) {
                 bdd.ref(vector.get(i));
             }
         }
-        return ndd;
+        return v;
     }
 
-    public static void deref(NDD ndd) {
-        for (ArrayList<Integer> vector : ndd.vectors) {
+    public static void deref(BDDVector v) {
+        for (ArrayList<Integer> vector : v.vectors) {
             for (int i = 0; i < vector.size(); i++) {
                 bdd.deref(vector.get(i));
             }
         }
     }
 
-    public static NDD andTo(NDD a, NDD b) {
-        NDD t = ref(AND(a, b));
+    public static BDDVector andTo(BDDVector a, BDDVector b) {
+        BDDVector t = ref(AND(a, b));
         deref(a);
+
         return t;
     }
 
-    public static NDD orTo(NDD a, NDD b) {
-        NDD t = ref(OR(a, b));
+    public static BDDVector orTo(BDDVector a, BDDVector b) {
+        BDDVector t = ref(OR(a, b));
         deref(a);
+
         return t;
     }
 
-    public static boolean checkCorrectness = false;
-
-    public static NDD AND(NDD a, NDD b) {
-        NDD ret = ANDRec(a, b);
+    public static BDDVector AND(BDDVector a, BDDVector b) {
+        BDDVector ret = ANDRec(a, b);
 
         return ret;
     }
 
-    private static NDD ANDRec(NDD a, NDD b) {
+    private static BDDVector ANDRec(BDDVector a, BDDVector b) {
         if (a.is_False() || b.is_False())
-            return NDDFalse;
+            return VectorFalse;
         if (a.is_True())
-            return ref(new NDD(b));
+            return ref(new BDDVector(b));
         if (b.is_True())
-            return ref(new NDD(a));
+            return ref(new BDDVector(a));
         if (a.equals(b))
-            return ref(new NDD(a));
+            return ref(new BDDVector(a));
 
-        NDD ret = new NDD();
+        BDDVector ret = new BDDVector();
         for (ArrayList<Integer> vectorA : a.vectors) {
             for (ArrayList<Integer> vectorB : b.vectors) {
                 ArrayList<Integer> vectorC = new ArrayList<>();
@@ -225,42 +230,44 @@ public class NDD {
         return ret;
     }
 
-    public static NDD OR(NDD a, NDD b) {
-        NDD ret = ORRec(a, b);
+    public static BDDVector OR(BDDVector a, BDDVector b) {
+        BDDVector ret = ORRec(a, b);
 
         return ret;
     }
 
-    private static NDD ORRec(NDD a, NDD b) {
+    private static BDDVector ORRec(BDDVector a, BDDVector b) {
         if (a.is_True() || b.is_True())
-            return NDDTrue;
+            return VectorTrue;
         if (a.is_False())
-            return ref(new NDD(b));
+            return ref(new BDDVector(b));
         if (b.is_False())
-            return ref(new NDD(a));
+            return ref(new BDDVector(a));
         if (a.equals(b))
-            return ref(new NDD(a));
+            return ref(new BDDVector(a));
 
-        NDD ret = new NDD();
+        BDDVector ret = new BDDVector();
         ret.vectors.addAll(a.vectors);
         ret.vectors.addAll(b.vectors);
         return ref(ret);
     }
 
-    public static NDD Not(NDD a) {
+    /*
+    * Three different implementation of Not operation,
+    * but only recommend NotRecBackBDD for its fastest speed.
+    */
+    public static BDDVector Not(BDDVector a) {
         // return NotRec(a);
         // return NotRecDirectly(a);
-        NDD ret = NotRecBackBDD(a);
-
-        return ret;
+        return NotRecBackBDD(a);
     }
 
-    private static NDD NotRecBackBDD(NDD a) {
+    private static BDDVector NotRecBackBDD(BDDVector a) {
         ref(a);
         int bddidx = bdd.ref(toBDD(a));
         int idx = bdd.ref(bdd.not(bddidx));
         try {
-            NDD ret = toNDD(idx);
+            BDDVector ret = toBDDVector(idx);
             bdd.deref(bddidx);
             bdd.deref(idx);
             deref(a);
@@ -280,18 +287,17 @@ public class NDD {
                 System.out.println("-1 vectors");
             }
         }
-        return NDDTrue;
+        return VectorTrue;
     }
 
-    private static NDD NotRecDirectly(NDD a) {
+    private static BDDVector NotRecDirectly(BDDVector a) {
         if (a.is_True())
-            return NDDFalse;
+            return VectorFalse;
         if (a.is_False())
-            return NDDTrue;
+            return VectorTrue;
 
-        if (a.vectors.size() == 1) {
-            return new NDD(NotRecSingleVector(a.vectors.iterator().next()));
-        }
+        if (a.vectors.size() == 1)
+            return new BDDVector(NotRecSingleVector(a.vectors.iterator().next()));
 
         // ret: vectors
         // vector: vector to be split and bdd.and only at the same idx
@@ -326,7 +332,7 @@ public class NDD {
             ret.clear();
             ret = retNext;
         }
-        return ref(new NDD(ret));
+        return ref(new BDDVector(ret));
     }
 
     private static HashSet<ArrayList<Integer>> NotRecSingleVector(ArrayList<Integer> vector) {
@@ -356,16 +362,16 @@ public class NDD {
         return ret;
     }
 
-    private static NDD NotRec(NDD a) {
+    private static BDDVector NotRec(BDDVector a) {
         if (a.is_True())
-            return NDDFalse;
+            return VectorFalse;
         if (a.is_False())
-            return NDDTrue;
+            return VectorTrue;
 
-        NDD ret = NDD.NDDTrue;
+        BDDVector ret = BDDVector.VectorTrue;
 
         for (ArrayList<Integer> vector : a.vectors) {
-            NDD tmp = new NDD();
+            BDDVector tmp = new BDDVector();
             for (int i = 0; i < vector.size(); i++) {
                 if (vector.get(i) == 1)
                     continue;
@@ -376,8 +382,8 @@ public class NDD {
                 temp.set(i, bdd.ref(bdd.not(vector.get(i))));
                 tmp.vectors.add(temp);
             }
-            NDD t = ret;
-            ret = ref(NDD.AND(ret, tmp));
+            BDDVector t = ret;
+            ret = ref(AND(ret, tmp));
             deref(t);
             deref(tmp);
         }
@@ -385,19 +391,19 @@ public class NDD {
         return ref(ret);
     }
 
-    public static NDD Diff(NDD a, NDD b) {
+    public static BDDVector Diff(BDDVector a, BDDVector b) {
         return ref(AND(a, Not(b)));
     }
 
-    public static NDD Exist(NDD a, int field) {
+    public static BDDVector Exist(BDDVector a, int field) {
         return ExistRec(a, field);
     }
 
-    private static NDD ExistRec(NDD a, int field) {
+    private static BDDVector ExistRec(BDDVector a, int field) {
         if (a.is_True() || a.is_False())
             return a;
 
-        NDD ret = new NDD(a);
+        BDDVector ret = new BDDVector(a);
         for (ArrayList<Integer> vector : ret.vectors) {
             vector.set(field, 1);
         }
@@ -456,14 +462,14 @@ public class NDD {
         return curr;
     }
 
-    public static int toBDD(NDD n) {
+    public static int toBDD(BDDVector n) {
         if (reuse)
             return toBDDReuse(n);
         return toBDDNotReuse(n);
     }
 
     // bdd not reuse
-    public static int toBDDNotReuse(NDD n) {
+    public static int toBDDNotReuse(BDDVector n) {
         ArrayList<Integer> bdds = new ArrayList<>();
         for (ArrayList<Integer> vector : n.vectors) {
             int lastIdx = 1;
@@ -490,10 +496,9 @@ public class NDD {
     }
 
     // bdd reuse
-    public static int toBDDReuse(NDD n) {
-        if (n.is_True()) {
+    public static int toBDDReuse(BDDVector n) {
+        if (n.is_True())
             return 1;
-        }
 
         ArrayList<Integer> bdds = new ArrayList<>();
         for (ArrayList<Integer> vector : n.vectors) {
@@ -535,17 +540,17 @@ public class NDD {
         return ret;
     }
 
-    public static NDD toNDD(int a) {
+    public static BDDVector toBDDVector(int a) {
         try {
-            NDD ret = toNDDRec(a);
+            BDDVector ret = toBDDVectorRec(a);
             return ret;
         } catch (Exception e) {
             throw e;
         }
-        // return toNDDRec(a);
+        // return toBDDVectorRec(a);
     }
 
-    private static NDD toNDDRec(int a) {
+    private static BDDVector toBDDVectorRec(int a) {
         // decomposed: from idx -> {to idx -> bdd}
         HashMap<Integer, HashMap<Integer, Integer>> decomposed = decompose(a);
 
@@ -557,25 +562,6 @@ public class NDD {
         }
 
         toBDDvectorDFS(vectors, decomposed, a, temp);
-
-        boolean flag = false;
-        for (ArrayList<Integer> vector : vectors) {
-            if (vector.size() != fieldNum) {
-                flag = true;
-                System.out.println("in vector");
-                System.out.println(vector.size());
-            }
-        }
-        if (flag) {
-            System.out.println("idx " + a);
-            for (Map.Entry<Integer, HashMap<Integer, Integer>> entry : decomposed.entrySet()) {
-                System.out.println(entry.getKey() + " = ");
-                for (Map.Entry<Integer, Integer> en : entry.getValue().entrySet()) {
-                    System.out.println("\t" + en.getKey() + " " + en.getValue());
-                }
-            }
-            System.out.println(vectors.toString());
-        }
 
         // replace
         if (reuse) {
@@ -639,7 +625,7 @@ public class NDD {
             }
         }
 
-        return NDD.ref(new NDD(vectors));
+        return BDDVector.ref(new BDDVector(vectors));
     }
 
     private static void toBDDvectorDFS(Set<ArrayList<Integer>> vectors,
@@ -752,6 +738,7 @@ public class NDD {
             boundary_tree.get(root).add(1);
             return;
         }
+
         if (bdd_getField(root) != bdd_getField(curr)) {
             if (!boundary_tree.containsKey(root)) {
                 boundary_tree.put(root, new HashSet<Integer>());
@@ -760,6 +747,7 @@ public class NDD {
             boundary_points.get(bdd_getField(curr)).add(curr);
             return;
         }
+
         detect_boundary_point(root, bdd.getLow(curr), boundary_tree, boundary_points);
         detect_boundary_point(root, bdd.getHigh(curr), boundary_tree, boundary_points);
     }
@@ -796,31 +784,30 @@ public class NDD {
         return result;
     }
 
-    public static int toZero(NDD n) {
+    public static int toZero(BDDVector n) {
         ref(n);
         int idx = bdd.ref(toBDD(n));
         int ret = bdd.toZero(idx);
         bdd.deref(idx);
         deref(n);
         return ret;
-
     }
 
-    public static NDD encodeAtMostKFailureVarsSorted(BDD bdd, int[] vars, int startField, int endField, int k) {
+    public static BDDVector encodeAtMostKFailureVarsSorted(BDD bdd, int[] vars, int startField, int endField, int k) {
         return encodeAtMostKFailureVarsSortedRec(bdd, vars, endField, startField, k);
     }
 
-    private static NDD encodeAtMostKFailureVarsSortedRec(BDD bdd, int[] vars, int endField, int currField, int k) {
+    private static BDDVector encodeAtMostKFailureVarsSortedRec(BDD bdd, int[] vars, int endField, int currField, int k) {
         if (currField > endField)
-            return NDDTrue;
+            return VectorTrue;
         int fieldSize = upperBound[0] + 1;
         if (currField > 0)
             fieldSize = upperBound[currField] - upperBound[currField - 1];
-        HashMap<NDD, Integer> map = new HashMap<NDD, Integer>();
+        HashMap<BDDVector, Integer> map = new HashMap<BDDVector, Integer>();
         for (int i = 0; i <= k; i++) {
             // bdd with k and only k failures
             int pred = bdd.ref(encodeBDD(bdd, vars, fieldSize - 1, 0, i));
-            NDD next = encodeAtMostKFailureVarsSortedRec(bdd, vars, endField, currField + 1, k - i);
+            BDDVector next = encodeAtMostKFailureVarsSortedRec(bdd, vars, endField, currField + 1, k - i);
             int nextPred = 0;
             if (map.containsKey(next))
                 nextPred = map.get(next);
@@ -831,15 +818,15 @@ public class NDD {
             nextPred = t;
             map.put(next, nextPred);
         }
-        return NDD.addAtField(currField, map);
-        // return NDD.table.mk(currField, map);
+        return BDDVector.addAtField(currField, map);
+        // return BDDVector.table.mk(currField, map);
     }
 
-    // replacement of NDD.table.mk(currField, map)
-    public static NDD addAtField(int field, HashMap<NDD, Integer> map) {
-        NDD ret = new NDD();
-        for (Map.Entry<NDD, Integer> entry : map.entrySet()) {
-            NDD n = entry.getKey();
+    // replacement of BDDVector.table.mk(currField, map)
+    public static BDDVector addAtField(int field, HashMap<NDD, Integer> map) {
+        BDDVector ret = new BDDVector();
+        for (Map.Entry<BDDVector, Integer> entry : map.entrySet()) {
+            BDDVector n = entry.getKey();
             int b = entry.getValue();
             for (ArrayList<Integer> vector : n.vectors) {
                 ArrayList<Integer> temp = new ArrayList<>(vector);
@@ -852,9 +839,8 @@ public class NDD {
 
     private static int encodeBDD(BDD bdd, int[] vars, int endVar, int currVar, int k) {
         // cache? link num, k -> bdd
-        if (k < 0) {
+        if (k < 0)
             return 0;
-        }
         if (currVar > endVar) {
             if (k > 0)
                 return 0;
@@ -863,13 +849,12 @@ public class NDD {
         }
         int low = encodeBDD(bdd, vars, endVar, currVar + 1, k - 1);
         int high = encodeBDD(bdd, vars, endVar, currVar + 1, k);
+        
         // return bdd.mk(currVar, low, high);
         return bdd.mk(bdd.getVar(vars[endVar - currVar]), low, high);
     }
 
-    public static boolean satCountTest = false;
-
-    public static double satCount(NDD curr) {
+    public static double satCount(BDDVector curr) {
         int idx = bdd.ref(toBDD(curr));
         double ret = bdd.satCount(idx);
         if (reuse)
@@ -880,7 +865,7 @@ public class NDD {
     }
 
     // can not deal with [[3, 1, 1], [1, 1, 2]] which has overlay
-    // private static double satCountRec(NDD curr) {
+    // private static double satCountRec(BDDVector curr) {
     // double ret = 0.0;
     // for (ArrayList<Integer> vector : curr.vectors) {
     // double subRet = 1.0;
@@ -892,7 +877,7 @@ public class NDD {
     // return ret;
     // }
 
-    public static void printDot(String path, NDD curr) {
+    public static void printDot(String path, BDDVector curr) {
         for (ArrayList<Integer> vector : curr.vectors) {
             for (int i = 0; i < fieldNum; i++) {
                 int idx = vector.get(i);
@@ -903,7 +888,7 @@ public class NDD {
         }
     }
 
-    public static void nodeCount(NDD node) {
+    public static void nodeCount(BDDVector node) {
         HashSet<Integer> BDDRootSet = new HashSet<Integer>();
         HashSet<Integer> BDDSet = new HashSet<Integer>();
         for (ArrayList<Integer> vector : node.vectors) {
