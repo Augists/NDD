@@ -5,7 +5,7 @@ import jdd.bdd.BDD;
 public class NDDQueens {
 	public int field_num;
 	public int[] upperBound;
-	public double [] div;
+	public double[] div;
 	public int[] bdds, nbdds;
 	public int N;
 	public NDD queen;
@@ -20,34 +20,28 @@ public class NDDQueens {
 		return nbdds[y + x * N];
 	}
 
-	private int [] boundPolicy1(int N, int F)
-	{
-		int [] bound = new int [F];
+	private int[] boundPolicy(int N, int F) {
+		int[] bound = new int[F];
 		for (int curr = 0; curr < F; curr++) {
-			bound[curr] = (curr + 1) * (N*N / F)-1;
+			bound[curr] = (curr + 1) * (N * N / F) - 1;
 		}
-		bound[F - 1] = N*N-1;
+		bound[F - 1] = N * N - 1;
 		return bound;
 	}
 
-	public double [] calculateDiv(int N, int F)
-	{
-		double [] ret = new double [F];
+	public double[] calculateDiv(int N, int F) {
+		double[] ret = new double[F];
 		for (int curr = 0; curr < F; curr++) {
 			int len;
-			if(curr == 0)
-			{
+			if (curr == 0) {
 				len = upperBound[curr] + 1;
+			} else {
+				len = upperBound[curr] - upperBound[curr - 1];
 			}
-			else
-			{
-				len = upperBound[curr] - upperBound[curr-1];
-			}
-			len = N*N - len;
+			len = N * N - len;
 			double d = 1.0;
-			for(int t=0;t<len;t++)
-			{
-				d = d*2;
+			for (int t = 0; t < len; t++) {
+				d = d * 2;
 			}
 			ret[curr] = d;
 		}
@@ -61,18 +55,13 @@ public class NDDQueens {
 		NDD.bdd = bdd;
 		time = System.currentTimeMillis();
 
-		upperBound = boundPolicy1(N, F);
+		upperBound = boundPolicy(N, F);
 		div = calculateDiv(N, F);
-		// for(double num : div)
-		// {
-		// 	System.out.print(num+" ");
-		// }
-		// System.out.println();
 
 		NDD.SetFieldNum(F);
 		NDD.SetUpperBound(upperBound);
 
-		//declare var line by line
+		// declare var line by line
 		int all = N * N;
 		bdds = new int[all];
 		nbdds = new int[all];
@@ -177,7 +166,7 @@ public class NDDQueens {
 	public static void main(String[] args) {
 		NDDQueens q;
 		q = new NDDQueens(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
-		System.out.println("N:"+q.N+" Field:"+q.field_num+" Time:"+q.time+" Sat:"+NDD.satCount(q.queen, q.div));
-		// System.out.println("N:"+q.N+" Field:"+q.field_num+" Time:"+time+" Sat:"+NDD.satCount(q.queen, q.div) + " BDD node: " + BDD.mkNodeCount + " NDD node: " + NodeTable.mkCount);
+		System.out.println(
+				"N:" + q.N + " Field:" + q.field_num + " Time:" + q.time + " Sat:" + NDD.satCount(q.queen, q.div));
 	}
 }

@@ -1,0 +1,4 @@
+vpn15 Core-0-0_vpn15 vpn21 Core-0-0_vpn21
+vpn21 Core-0-1_vpn21 vpn15 Core-0-1_vpn15
+vpn21 Core-0-0_vpn21 vpn15 Core-0-0_vpn15
+vpn15 Core-0-1_vpn15 vpn21 Core-0-1_vpn21

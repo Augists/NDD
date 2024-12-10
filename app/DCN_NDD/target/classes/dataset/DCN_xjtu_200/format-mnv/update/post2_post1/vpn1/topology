@@ -1,0 +1,4 @@
+FW1_vpn1 10ge1/0/1 vpn1 inport
+Core-0-1_vpn1 10ge3/0/1 vpn1 inport
+FW0_vpn1 10ge1/0/0 vpn1 inport
+Core-0-0_vpn1 10ge3/0/0 vpn1 inport

@@ -1,0 +1,16 @@
++ fwd core-0-1_vpn5 1006636544 24 vxlan 24
++ fwd leaf-0-4_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-1_vpn5 1006636544 24 vxlan 24
++ fwd leaf-0-0_vpn5 1006636545 32 vxlan 32
++ fwd core-0-0_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-2_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-4_vpn5 1006636544 24 vxlan 24
++ fwd leaf-0-5_vpn5 1006636545 32 vbdif6002 32
++ fwd leaf-0-2_vpn5 1006636544 24 vxlan 24
++ fwd leaf-0-3_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-0_vpn5 1006636544 24 vxlan 24
++ fwd core-0-0_vpn5 1006636544 24 vxlan 24
++ fwd core-0-1_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-1_vpn5 1006636545 32 vxlan 32
++ fwd leaf-0-3_vpn5 1006636544 24 vxlan 24
++ fwd leaf-0-5_vpn5 1006636544 24 vbdif6002 24

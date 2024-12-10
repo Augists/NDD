@@ -2,8 +2,9 @@ package oldndd;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import javafx.util.*;
+
 import jdd.bdd.BDD;
+import javafx.util.*;
 
 public class FieldManager {
 //     public int field;

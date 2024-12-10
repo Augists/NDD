@@ -1,9 +1,11 @@
-
+/*
+ * copy from jdd/examples
+ */
 package jdd.examples;
 
 import jdd.bdd.*;
 import jdd.util.*;
-import jdd.util.math.*; // for Digits
+import jdd.util.math.*;
 
 /**
  * <pre>
@@ -34,7 +36,6 @@ public class BDDQueens extends BDD implements Queens {
 	}
 
 	public BDDQueens(int N) {
-		// super(10000, N * N * 64);
 		super(1 + Math.max(1000, (int) (Math.pow(4.4, N - 6)) * 1000), 10000);
 
 		this.N = N;
@@ -64,7 +65,6 @@ public class BDDQueens extends BDD implements Queens {
 		for (int i = 0; i < N; i++)
 			for (int j = 0; j < N; j++) {
 				build(i, j, impBatch);
-				// Test.check(work_stack_tos == 0, "in QUEENS: workset stack should be empty");
 			}
 
 		for(int i=0;i<N;i++)
@@ -75,8 +75,6 @@ public class BDDQueens extends BDD implements Queens {
 
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
-				// printDot("/home/zcli/lzc/Field-Decision-Network/NQueen/src/main/pic/"+N+"/a"+i+j, queen);
-				// printDot("/home/zcli/lzc/Field-Decision-Network/NQueen/src/main/pic/"+N+"/b"+i+j, impBatch[i][j]);
 				queen = andTo(queen, impBatch[i][j]);
 				deref(impBatch[i][j]);
 			}
@@ -84,22 +82,6 @@ public class BDDQueens extends BDD implements Queens {
 
 		time = System.currentTimeMillis() - time;
 		sols = satCount(queen);
-
-		// printDot("/home/zcli/lzc/Field-Decision-Network/NQueen/src/main/pic/queen"+N, queen);
-
-		// memory_usage = getMemoryUsage();
-		// if (queen == 0)
-		// 	solvec = null; // no solutions
-
-		// int[] tmp = oneSat(queen, null);
-		// solvec = new boolean[tmp.length];
-		// for (int x = 0; x < solvec.length; x++)
-		// 	solvec[x] = (tmp[x] == 1);
-		// deref(queen);
-		// if (Options.verbose)
-		// 	showStats();
-
-		// cleanup();
 	}
 
 	private void build(int i, int j, int[][] impBatch) {
@@ -190,15 +172,9 @@ public class BDDQueens extends BDD implements Queens {
 
 	// -------------------------------------------
 	public static void main(String[] args) {
-		// BDDQueens q = new BDDQueens(Integer.parseInt(args[0]));
-		// double mem = Digits.numberDivided(q.getMemory(), 1024 * 1024);
-		// System.out.println("There are " + q.numberOfSolutions() + " solutions (time: " + q.getTime() + ", memory: "
-		// 		+ mem + " MB)");
-
 		BDDQueens q;
 		q = new BDDQueens(Integer.parseInt(args[0]));
 		System.out.println("There are " + q.numberOfSolutions() + " solutions time: " + q.time + " N: " + args[0]);
-		// System.out.println("There are " + q.numberOfSolutions() + " solutions time: " + time + " N: " + args[0] + " BDD node: " + BDD.mkNodeCount);
 	}
 
 	/** testbench. do not call */

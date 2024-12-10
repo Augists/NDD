@@ -1,0 +1,2 @@
++ policy leaf2_tp_segment vpn1 in
++ gbp leaf2_tp_segment 7001 7002 deny 65535

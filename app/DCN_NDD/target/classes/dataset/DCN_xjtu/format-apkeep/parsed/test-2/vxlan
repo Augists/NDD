@@ -1,0 +1,5 @@
++ vni leaf1_vpn1 1001
++ vni leaf2_vpn1 1001
++ vni leaf3_vpn1 1001
++ vxlan leaf1_vpn1 200000 24 100002 32 24
++ vxlan leaf1_vpn1 200000 24 100003 32 24

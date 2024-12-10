@@ -1,0 +1,4 @@
+vpn50 Core-0-1_vpn50 vpn24 Core-0-1_vpn24
+vpn24 Core-0-1_vpn24 vpn50 Core-0-1_vpn50
+vpn50 Core-0-0_vpn50 vpn24 Core-0-0_vpn24
+vpn24 Core-0-0_vpn24 vpn50 Core-0-0_vpn50

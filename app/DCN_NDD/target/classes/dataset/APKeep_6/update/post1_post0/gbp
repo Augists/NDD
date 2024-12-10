@@ -1,0 +1,12 @@
++ gbp leaf-0-4_tp_segment 40007 40009 permit
++ gbp leaf-0-2_tp_segment 40007 40009 permit
++ gbp leaf-0-0_tp_segment 40007 40009 permit
++ gbp leaf-0-1_tp_segment 40009 40007 permit
++ gbp leaf-0-5_tp_segment 40009 40007 permit
++ gbp leaf-0-3_tp_segment 40009 40007 permit
++ gbp leaf-0-3_tp_segment 40007 40009 permit
++ gbp leaf-0-5_tp_segment 40007 40009 permit
++ gbp leaf-0-4_tp_segment 40009 40007 permit
++ gbp leaf-0-0_tp_segment 40009 40007 permit
++ gbp leaf-0-1_tp_segment 40007 40009 permit
++ gbp leaf-0-2_tp_segment 40009 40007 permit

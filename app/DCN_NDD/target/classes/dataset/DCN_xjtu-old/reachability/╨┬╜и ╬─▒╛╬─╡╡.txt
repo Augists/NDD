@@ -1,0 +1,21 @@
+
+
+
+
+
+
+Leaf-0-13_vpn8->Leaf-0-14_bd15:
+Leaf-0-13_vpn8->Leaf-0-15_bd15:
+
+
++ fwd Leaf-0-14_vpn1 167811841 32 vbdif15 32
++ fwd Leaf-0-14_vpn1 167811840 24 vbdif15 24
+
++ vxlan Leaf-0-13_vpn8 167808257 32 318900232 32 32
+
++ fwd Leaf-0-14 318900232 32 vxlan 32
+
+
+Core-0-1_vpn14,vpn11=[Core-0-1_vpn11,inport]
+
+[Leaf-0-13_vpn8, Leaf-0-13_encapip, Leaf-0-13, Spine-0-1, Core-0-1, Core-0-1_decapip, Core-0-1_vpn5]

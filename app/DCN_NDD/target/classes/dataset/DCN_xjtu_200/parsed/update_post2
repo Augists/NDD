@@ -1,0 +1,65 @@
++ fwd Leaf-0-6_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-10_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-18_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-4_vpn1 671162212 32 19.0.0.1 32
++ policy Leaf-0-0_tp_pbr_1 Leaf-0-0 vpn1 in
++ policy Core-0-1_tp_pv_pbr_global Core-0-1 global in
++ fwd FW0_vpn1 0 0 10ge1/0/0 0
++ fwd Leaf-0-19_vpn1 671162212 32 19.0.0.1 32
++ link FW1_vpn1 10ge1/0/1 vpn1 inport
++ fwd Leaf-0-7_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-5_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-8_vpn1 671162112 24 19.0.0.1 24
++ redirect Core-0-1_tp_pv_pbr_global Core-0-1_vpn1 in redirect vpn1 40.1.31.101
++ fwd FW1_vpn1 671162112 24 10ge1/0/1 24
++ fwd FW0_vpn1 671162112 24 10ge1/0/0 24
++ fwd Leaf-0-11_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-13_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-6_vpn1 671162212 32 19.0.0.1 32
++ fwd Core-0-1_vpn1 671162112 24 10ge3/0/1 24
++ fwd Core-0-0_vpn1 671162112 24 10ge3/0/0 24
++ fwd Leaf-0-9_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-10_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-11_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-7_vpn1 671162212 32 19.0.0.1 32
++ redirect Leaf-0-0_tp_pbr_1 Leaf-0-0_vpn1 in redirect vpn1 40.1.31.101
++ fwd Leaf-0-12_vpn1 671162112 24 19.0.0.1 24
++ pbr Core-0-1_tp_pv_pbr_global access-list acl1 permit 0 255 10.0.1.1 0.0.0.255 null null 10.0.45.0 0.0.0.255 null null 65535 redirect
++ fwd Leaf-0-12_vpn1 671162212 32 19.0.0.1 32
++ link Core-0-1_vpn1 10ge3/0/1 vpn1 inport
++ fwd Leaf-0-14_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-0_vpn1 671162112 24 19.0.0.1 24
++ redirect Core-0-0_tp_pv_pbr_global Core-0-0_vpn1 in redirect vpn1 40.1.31.101
++ fwd Leaf-0-8_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-9_vpn1 671162212 32 19.0.0.1 32
++ device FW1_vpn1
++ fwd Leaf-0-1_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-15_vpn1 671162112 24 19.0.0.1 24
++ fwd Core-0-1_vpn1 671162212 32 10ge3/0/1 32
++ fwd Leaf-0-13_vpn1 671162212 32 19.0.0.1 32
++ policy Core-0-0_tp_pv_pbr_global Core-0-0 global in
++ fwd Core-0-0_vpn1 671162212 32 10ge3/0/0 32
++ fwd Leaf-0-16_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-2_vpn1 671162112 24 19.0.0.1 24
++ link FW0_vpn1 10ge1/0/0 vpn1 inport
++ pbr Leaf-0-0_tp_pbr_1 access-list acl1 permit 0 255 10.0.1.1 0.0.0.255 null null 10.0.45.0 0.0.0.255 null null 65535 redirect
++ fwd Leaf-0-17_vpn1 671162112 24 19.0.0.1 24
++ fwd FW1_vpn1 671162213 32 10ge1/0/1 32
++ fwd FW0_vpn1 671162213 32 10ge1/0/0 32
++ fwd Leaf-0-0_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-14_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-16_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-2_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-3_vpn1 671162112 24 19.0.0.1 24
++ fwd FW1_vpn1 0 0 10ge1/0/1 0
++ pbr Core-0-0_tp_pv_pbr_global access-list acl1 permit 0 255 10.0.1.1 0.0.0.255 null null 10.0.45.0 0.0.0.255 null null 65535 redirect
++ fwd Leaf-0-15_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-1_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-4_vpn1 671162112 24 19.0.0.1 24
++ fwd Leaf-0-18_vpn1 671162112 24 19.0.0.1 24
++ link Core-0-0_vpn1 10ge3/0/0 vpn1 inport
++ fwd Leaf-0-3_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-17_vpn1 671162212 32 19.0.0.1 32
++ fwd Leaf-0-19_vpn1 671162112 24 19.0.0.1 24
++ device FW0_vpn1
++ fwd Leaf-0-5_vpn1 671162112 24 19.0.0.1 24

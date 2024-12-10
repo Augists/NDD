@@ -1,0 +1,2 @@
++ pbr leaf-0-0_tp_pbr access-list acl1 permit 0 255 10.0.0.1 0.0.0.255 null null 10.0.6.1 0.0.0.255 null null  redirect
++ policy leaf-0-0_tp_pbr leaf-0-0 vpn2 in

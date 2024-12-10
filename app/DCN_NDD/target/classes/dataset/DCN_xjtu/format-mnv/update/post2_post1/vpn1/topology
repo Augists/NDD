@@ -1,0 +1,3 @@
+Core-0-0_vpn1 vbdif5006 Core-0-0_bd5006 inport
+Core-0-1_vpn1 19.0.0.1 Core-0-0_vpn1 19.0.0.2
+FW0_vpn1 10ge1/0/0 vpn1 inport

@@ -1,0 +1,2222 @@
+{
+  "message": "",
+  "code": 0,
+  "returnNetworkId": {
+    "networkId": "svn-perform-test20-20-200-40_post2",
+    "snapshotId": null
+  },
+  "detail": [
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-17",
+        "epInfName": "bridge-domain17"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/12.13",
+          "10GE1/0/13.13",
+          "10GE1/0/10.13",
+          "10GE1/0/11.13",
+          "10GE1/0/8.13",
+          "10GE1/0/7.13",
+          "10GE1/0/9.13",
+          "10GE1/0/5.13",
+          "10GE1/0/6.13",
+          "10GE1/0/4.13"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10033,
+        "bdId": 13,
+        "deviceId": "Leaf-0-13",
+        "epInfName": "bridge-domain13"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 20001,
+        "bdId": 1,
+        "deviceId": "Core-0-1",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.3",
+          "10GE1/0/8.3",
+          "10GE1/0/7.3",
+          "10GE1/0/12.3",
+          "10GE1/0/5.3",
+          "10GE1/0/6.3",
+          "10GE1/0/13.3",
+          "10GE1/0/10.3",
+          "10GE1/0/11.3",
+          "10GE1/0/4.3"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10003,
+        "bdId": 3,
+        "deviceId": "Leaf-0-2",
+        "epInfName": "bridge-domain3"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/8.7",
+          "10GE1/0/7.7",
+          "10GE1/0/12.7",
+          "10GE1/0/5.7",
+          "10GE1/0/6.7",
+          "10GE1/0/13.7",
+          "10GE1/0/10.7",
+          "10GE1/0/11.7",
+          "10GE1/0/4.7",
+          "10GE1/0/9.7"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10007,
+        "bdId": 7,
+        "deviceId": "Leaf-0-6",
+        "epInfName": "bridge-domain7"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/8.7",
+          "10GE1/0/7.7",
+          "10GE1/0/12.7",
+          "10GE1/0/5.7",
+          "10GE1/0/6.7",
+          "10GE1/0/13.7",
+          "10GE1/0/10.7",
+          "10GE1/0/11.7",
+          "10GE1/0/4.7",
+          "10GE1/0/9.7"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10007,
+        "bdId": 7,
+        "deviceId": "Leaf-0-7",
+        "epInfName": "bridge-domain7"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.3",
+          "10GE1/0/8.3",
+          "10GE1/0/7.3",
+          "10GE1/0/12.3",
+          "10GE1/0/5.3",
+          "10GE1/0/6.3",
+          "10GE1/0/13.3",
+          "10GE1/0/10.3",
+          "10GE1/0/11.3",
+          "10GE1/0/4.3"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10003,
+        "bdId": 3,
+        "deviceId": "Leaf-0-3",
+        "epInfName": "bridge-domain3"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/8.7",
+          "10GE1/0/7.7",
+          "10GE1/0/12.7",
+          "10GE1/0/5.7",
+          "10GE1/0/6.7",
+          "10GE1/0/13.7",
+          "10GE1/0/10.7",
+          "10GE1/0/11.7",
+          "10GE1/0/4.7",
+          "10GE1/0/9.7"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10007,
+        "bdId": 7,
+        "deviceId": "Leaf-0-6",
+        "epInfName": "bridge-domain7"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.3",
+          "10GE1/0/8.3",
+          "10GE1/0/7.3",
+          "10GE1/0/12.3",
+          "10GE1/0/5.3",
+          "10GE1/0/6.3",
+          "10GE1/0/13.3",
+          "10GE1/0/10.3",
+          "10GE1/0/11.3",
+          "10GE1/0/4.3"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10003,
+        "bdId": 3,
+        "deviceId": "Leaf-0-2",
+        "epInfName": "bridge-domain3"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/7.19",
+          "10GE1/0/8.19",
+          "10GE1/0/5.19",
+          "10GE1/0/6.19",
+          "10GE1/0/4.19",
+          "10GE1/0/10.19",
+          "10GE1/0/11.19",
+          "10GE1/0/13.19",
+          "10GE1/0/9.19",
+          "10GE1/0/12.19"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10039,
+        "bdId": 19,
+        "deviceId": "Leaf-0-18",
+        "epInfName": "bridge-domain19"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/13.15",
+          "10GE1/0/4.15",
+          "10GE1/0/12.15",
+          "10GE1/0/9.15",
+          "10GE1/0/7.15",
+          "10GE1/0/10.15",
+          "10GE1/0/11.15",
+          "10GE1/0/8.15",
+          "10GE1/0/5.15",
+          "10GE1/0/6.15"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10035,
+        "bdId": 15,
+        "deviceId": "Leaf-0-14",
+        "epInfName": "bridge-domain15"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/10.11",
+          "10GE1/0/11.11",
+          "10GE1/0/13.11",
+          "10GE1/0/9.11",
+          "10GE1/0/12.11",
+          "10GE1/0/7.11",
+          "10GE1/0/8.11",
+          "10GE1/0/5.11",
+          "10GE1/0/6.11",
+          "10GE1/0/4.11"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10031,
+        "bdId": 11,
+        "deviceId": "Leaf-0-10",
+        "epInfName": "bridge-domain11"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-5",
+        "epInfName": "bridge-domain5"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-1",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/12.9",
+          "10GE1/0/5.9",
+          "10GE1/0/6.9",
+          "10GE1/0/13.9",
+          "10GE1/0/10.9",
+          "10GE1/0/11.9",
+          "10GE1/0/4.9",
+          "10GE1/0/9.9",
+          "10GE1/0/8.9",
+          "10GE1/0/7.9"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10009,
+        "bdId": 9,
+        "deviceId": "Leaf-0-9",
+        "epInfName": "bridge-domain9"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 20001,
+        "bdId": 1,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain1"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 20001,
+        "bdId": 1,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/12.9",
+          "10GE1/0/5.9",
+          "10GE1/0/6.9",
+          "10GE1/0/13.9",
+          "10GE1/0/10.9",
+          "10GE1/0/11.9",
+          "10GE1/0/4.9",
+          "10GE1/0/9.9",
+          "10GE1/0/8.9",
+          "10GE1/0/7.9"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10009,
+        "bdId": 9,
+        "deviceId": "Leaf-0-9",
+        "epInfName": "bridge-domain9"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-5",
+        "epInfName": "bridge-domain5"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-1",
+        "epInfName": "bridge-domain1"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-16",
+        "epInfName": "bridge-domain17"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/12.13",
+          "10GE1/0/13.13",
+          "10GE1/0/10.13",
+          "10GE1/0/11.13",
+          "10GE1/0/8.13",
+          "10GE1/0/7.13",
+          "10GE1/0/9.13",
+          "10GE1/0/5.13",
+          "10GE1/0/6.13",
+          "10GE1/0/4.13"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10033,
+        "bdId": 13,
+        "deviceId": "Leaf-0-12",
+        "epInfName": "bridge-domain13"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/12.13",
+          "10GE1/0/13.13",
+          "10GE1/0/10.13",
+          "10GE1/0/11.13",
+          "10GE1/0/8.13",
+          "10GE1/0/7.13",
+          "10GE1/0/9.13",
+          "10GE1/0/5.13",
+          "10GE1/0/6.13",
+          "10GE1/0/4.13"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10033,
+        "bdId": 13,
+        "deviceId": "Leaf-0-12",
+        "epInfName": "bridge-domain13"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-16",
+        "epInfName": "bridge-domain17"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/13.15",
+          "10GE1/0/4.15",
+          "10GE1/0/12.15",
+          "10GE1/0/9.15",
+          "10GE1/0/7.15",
+          "10GE1/0/10.15",
+          "10GE1/0/11.15",
+          "10GE1/0/8.15",
+          "10GE1/0/5.15",
+          "10GE1/0/6.15"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10035,
+        "bdId": 15,
+        "deviceId": "Leaf-0-15",
+        "epInfName": "bridge-domain15"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/10.11",
+          "10GE1/0/11.11",
+          "10GE1/0/13.11",
+          "10GE1/0/9.11",
+          "10GE1/0/12.11",
+          "10GE1/0/7.11",
+          "10GE1/0/8.11",
+          "10GE1/0/5.11",
+          "10GE1/0/6.11",
+          "10GE1/0/4.11"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10031,
+        "bdId": 11,
+        "deviceId": "Leaf-0-11",
+        "epInfName": "bridge-domain11"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/7.19",
+          "10GE1/0/8.19",
+          "10GE1/0/5.19",
+          "10GE1/0/6.19",
+          "10GE1/0/4.19",
+          "10GE1/0/10.19",
+          "10GE1/0/11.19",
+          "10GE1/0/13.19",
+          "10GE1/0/9.19",
+          "10GE1/0/12.19"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10039,
+        "bdId": 19,
+        "deviceId": "Leaf-0-19",
+        "epInfName": "bridge-domain19"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn8",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-10",
+        "epInfName": "bridge-domain17"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/10.11",
+          "10GE1/0/11.11",
+          "10GE1/0/13.11",
+          "10GE1/0/9.11",
+          "10GE1/0/12.11",
+          "10GE1/0/7.11",
+          "10GE1/0/8.11",
+          "10GE1/0/5.11",
+          "10GE1/0/6.11",
+          "10GE1/0/4.11"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10031,
+        "bdId": 11,
+        "deviceId": "Leaf-0-11",
+        "epInfName": "bridge-domain11"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/13.15",
+          "10GE1/0/4.15",
+          "10GE1/0/12.15",
+          "10GE1/0/9.15",
+          "10GE1/0/7.15",
+          "10GE1/0/10.15",
+          "10GE1/0/11.15",
+          "10GE1/0/8.15",
+          "10GE1/0/5.15",
+          "10GE1/0/6.15"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10035,
+        "bdId": 15,
+        "deviceId": "Leaf-0-15",
+        "epInfName": "bridge-domain15"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/7.19",
+          "10GE1/0/8.19",
+          "10GE1/0/5.19",
+          "10GE1/0/6.19",
+          "10GE1/0/4.19",
+          "10GE1/0/10.19",
+          "10GE1/0/11.19",
+          "10GE1/0/13.19",
+          "10GE1/0/9.19",
+          "10GE1/0/12.19"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10039,
+        "bdId": 19,
+        "deviceId": "Leaf-0-19",
+        "epInfName": "bridge-domain19"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn8",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-11",
+        "epInfName": "bridge-domain17"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/8.7",
+          "10GE1/0/7.7",
+          "10GE1/0/12.7",
+          "10GE1/0/5.7",
+          "10GE1/0/6.7",
+          "10GE1/0/13.7",
+          "10GE1/0/10.7",
+          "10GE1/0/11.7",
+          "10GE1/0/4.7",
+          "10GE1/0/9.7"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10007,
+        "bdId": 7,
+        "deviceId": "Leaf-0-7",
+        "epInfName": "bridge-domain7"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.3",
+          "10GE1/0/8.3",
+          "10GE1/0/7.3",
+          "10GE1/0/12.3",
+          "10GE1/0/5.3",
+          "10GE1/0/6.3",
+          "10GE1/0/13.3",
+          "10GE1/0/10.3",
+          "10GE1/0/11.3",
+          "10GE1/0/4.3"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10003,
+        "bdId": 3,
+        "deviceId": "Leaf-0-3",
+        "epInfName": "bridge-domain3"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/10.11",
+          "10GE1/0/11.11",
+          "10GE1/0/13.11",
+          "10GE1/0/9.11",
+          "10GE1/0/12.11",
+          "10GE1/0/7.11",
+          "10GE1/0/8.11",
+          "10GE1/0/5.11",
+          "10GE1/0/6.11",
+          "10GE1/0/4.11"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10031,
+        "bdId": 11,
+        "deviceId": "Leaf-0-10",
+        "epInfName": "bridge-domain11"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/13.15",
+          "10GE1/0/4.15",
+          "10GE1/0/12.15",
+          "10GE1/0/9.15",
+          "10GE1/0/7.15",
+          "10GE1/0/10.15",
+          "10GE1/0/11.15",
+          "10GE1/0/8.15",
+          "10GE1/0/5.15",
+          "10GE1/0/6.15"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10035,
+        "bdId": 15,
+        "deviceId": "Leaf-0-14",
+        "epInfName": "bridge-domain15"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/7.19",
+          "10GE1/0/8.19",
+          "10GE1/0/5.19",
+          "10GE1/0/6.19",
+          "10GE1/0/4.19",
+          "10GE1/0/10.19",
+          "10GE1/0/11.19",
+          "10GE1/0/13.19",
+          "10GE1/0/9.19",
+          "10GE1/0/12.19"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10039,
+        "bdId": 19,
+        "deviceId": "Leaf-0-18",
+        "epInfName": "bridge-domain19"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-4",
+        "epInfName": "bridge-domain5"
+      },
+      "changeIpType": "IPV4",
+      "addInfy": [],
+      "newPathNumber": 2,
+      "addInfx": [],
+      "oldReachFlag": "REACHABLE",
+      "changeFlag": "CHANGE",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 1,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-0",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 20001,
+        "bdId": 1,
+        "deviceId": "Core-0-1",
+        "epInfName": "bridge-domain1"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/12.13",
+          "10GE1/0/13.13",
+          "10GE1/0/10.13",
+          "10GE1/0/11.13",
+          "10GE1/0/8.13",
+          "10GE1/0/7.13",
+          "10GE1/0/9.13",
+          "10GE1/0/5.13",
+          "10GE1/0/6.13",
+          "10GE1/0/4.13"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10033,
+        "bdId": 13,
+        "deviceId": "Leaf-0-13",
+        "epInfName": "bridge-domain13"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/5.17",
+          "10GE1/0/6.17",
+          "10GE1/0/4.17",
+          "10GE1/0/12.17",
+          "10GE1/0/8.17",
+          "10GE1/0/13.17",
+          "10GE1/0/7.17",
+          "10GE1/0/10.17",
+          "10GE1/0/11.17",
+          "10GE1/0/9.17"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10037,
+        "bdId": 17,
+        "deviceId": "Leaf-0-17",
+        "epInfName": "bridge-domain17"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-4",
+        "epInfName": "bridge-domain5"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-0",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [
+        "10GE3/0/0.3000"
+      ],
+      "newPathNumber": 1,
+      "addInfx": [],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/12.9",
+          "10GE1/0/5.9",
+          "10GE1/0/6.9",
+          "10GE1/0/13.9",
+          "10GE1/0/10.9",
+          "10GE1/0/11.9",
+          "10GE1/0/4.9",
+          "10GE1/0/9.9",
+          "10GE1/0/8.9",
+          "10GE1/0/7.9"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10009,
+        "bdId": 9,
+        "deviceId": "Leaf-0-8",
+        "epInfName": "bridge-domain9"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-5",
+        "epInfName": "bridge-domain5"
+      },
+      "changeIpType": "IPV4",
+      "addInfy": [],
+      "newPathNumber": 2,
+      "addInfx": [],
+      "oldReachFlag": "REACHABLE",
+      "changeFlag": "CHANGE",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 1,
+      "bdx": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-0",
+        "epInfName": "bridge-domain1"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.1",
+          "10GE1/0/8.1",
+          "10GE1/0/7.1",
+          "10GE1/0/12.1",
+          "10GE1/0/5.1",
+          "10GE1/0/6.1",
+          "10GE1/0/13.1",
+          "10GE1/0/10.1",
+          "10GE1/0/11.1",
+          "10GE1/0/4.1"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10001,
+        "bdId": 1,
+        "deviceId": "Leaf-0-0",
+        "epInfName": "bridge-domain1"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/12.9",
+          "10GE1/0/5.9",
+          "10GE1/0/6.9",
+          "10GE1/0/13.9",
+          "10GE1/0/10.9",
+          "10GE1/0/11.9",
+          "10GE1/0/4.9",
+          "10GE1/0/9.9",
+          "10GE1/0/8.9",
+          "10GE1/0/7.9"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10009,
+        "bdId": 9,
+        "deviceId": "Leaf-0-8",
+        "epInfName": "bridge-domain9"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    },
+    {
+      "newReachFlag": "REACHABLE",
+      "bdy": {
+        "infNames": [
+          "10GE1/0/9.5",
+          "10GE1/0/8.5",
+          "10GE1/0/7.5",
+          "10GE1/0/12.5",
+          "10GE1/0/5.5",
+          "10GE1/0/6.5",
+          "10GE1/0/13.5",
+          "10GE1/0/10.5",
+          "10GE1/0/11.5",
+          "10GE1/0/4.5"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 10005,
+        "bdId": 5,
+        "deviceId": "Leaf-0-4",
+        "epInfName": "bridge-domain5"
+      },
+      "changeIpType": "UNUSED",
+      "addInfy": [],
+      "newPathNumber": 1,
+      "addInfx": [
+        "10GE3/0/0.3000"
+      ],
+      "oldReachFlag": "UNREACHABLE",
+      "changeFlag": "ADD",
+      "delInfy": [],
+      "delInfx": [],
+      "modInfx": [],
+      "modInfy": [],
+      "oldPathNumber": 0,
+      "bdx": {
+        "infNames": [
+          "10GE3/0/0.3000"
+        ],
+        "vrfName": "vpn1",
+        "vniId": 25006,
+        "bdId": 5006,
+        "deviceId": "Core-0-0",
+        "epInfName": "bridge-domain5006"
+      }
+    }
+  ]
+}

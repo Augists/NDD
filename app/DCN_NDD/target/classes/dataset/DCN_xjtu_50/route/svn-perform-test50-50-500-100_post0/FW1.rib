@@ -1,0 +1,6 @@
+------------------------------------------------------------------------------
+Routing Table : _public_ 
+         Destinations : NA      Routes : NA
+
+Destination/Mask          Proto   Pre  Cost Flags              NextHop            Interface
+        40.0.40.1/32  connected     0     0    NA            127.0.0.1            LoopBack0

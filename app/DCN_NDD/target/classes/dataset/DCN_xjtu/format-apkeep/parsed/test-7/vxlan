@@ -1,0 +1,14 @@
++ vni Leaf1_vpn1 1001
++ vni Leaf1_vpn2 1002
++ vni Core1_vpn1 1001
++ vni Core1_vpn2 1002
++ vni Core1_vpn3 1003
++ vni Leaf2_vpn1 1001
++ vni Leaf3_vpn1 1001
++ vni Leaf3_vpn3 1003
++ vxlan Leaf1_vpn1 167780352 24 318898690 32 24
++ vxlan Leaf1_vpn1 300000 24 100003 32 24
++ vxlan Leaf1_vpn1 600000 24 318767105 32 24
++ vxlan Leaf1_vpn2 167780352 24 318767105 32 24
++ vxlan Core1_vpn1 167780352 24 318898690 32 24
++ vxlan Core1_vpn3 600000 24 100003 32 24

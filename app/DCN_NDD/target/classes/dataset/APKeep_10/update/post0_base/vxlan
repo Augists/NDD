@@ -1,0 +1,40 @@
++ vni leaf-0-0_vpn5 50005
++ vxlan leaf-0-5_vpn4 167776257 24 855638017 32 24
++ vxlan leaf-0-2_vpn4 167776257 24 855638017 32 24
++ vni leaf-0-7_vpn5 50005
++ vni leaf-0-3_vpn5 50005
++ vxlan leaf-0-7_vpn5 167782657 24 855638017 32 24
++ vxlan leaf-0-2_vpn5 167782657 24 855638017 32 24
++ vni leaf-0-9_vpn4 50004
++ vxlan leaf-0-8_vpn4 167776257 24 855638017 32 24
++ vni leaf-0-5_vpn4 50004
++ vxlan leaf-0-5_vpn5 167782657 24 855638017 32 24
++ vni leaf-0-4_vpn5 50005
++ vxlan leaf-0-8_vpn5 167782657 24 855638017 32 24
++ vxlan leaf-0-0_vpn5 167782657 24 855638017 32 24
++ vxlan leaf-0-7_vpn4 167776257 24 855638017 32 24
++ vxlan leaf-0-0_vpn4 167776257 24 855638017 32 24
++ vni leaf-0-6_vpn4 50004
++ vni leaf-0-2_vpn4 50004
++ vni leaf-0-7_vpn4 50004
++ vni leaf-0-5_vpn5 50005
++ vxlan leaf-0-9_vpn4 167776257 24 855638017 32 24
++ vxlan leaf-0-3_vpn5 167782657 24 855638017 32 24
++ vni leaf-0-2_vpn5 50005
++ vni leaf-0-8_vpn5 50005
++ vxlan leaf-0-6_vpn5 167782657 24 855638017 32 24
++ vxlan leaf-0-3_vpn4 167776257 24 855638017 32 24
++ vxlan leaf-0-1_vpn5 167782657 24 855638017 32 24
++ vni leaf-0-3_vpn4 50004
++ vni leaf-0-1_vpn4 50004
++ vni leaf-0-6_vpn5 50005
++ vni leaf-0-8_vpn4 50004
++ vni leaf-0-1_vpn5 50005
++ vxlan leaf-0-4_vpn4 167776257 24 855638017 32 24
++ vni leaf-0-4_vpn4 50004
++ vni leaf-0-9_vpn5 50005
++ vxlan leaf-0-4_vpn5 167782657 24 855638017 32 24
++ vxlan leaf-0-1_vpn4 167776257 24 855638017 32 24
++ vxlan leaf-0-6_vpn4 167776257 24 855638017 32 24
++ vni leaf-0-0_vpn4 50004
++ vxlan leaf-0-9_vpn5 167782657 24 855638017 32 24

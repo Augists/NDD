@@ -1,0 +1,4 @@
++ gbp FW1_vpn1 any any 10ge1/0/1
++ gbp FW0_vpn1 any any 10ge1/0/0
++ gbp Core-0-1_vpn1 any any 10ge3/0/0
++ gbp Core-0-0_vpn1 any any 10ge3/0/0
