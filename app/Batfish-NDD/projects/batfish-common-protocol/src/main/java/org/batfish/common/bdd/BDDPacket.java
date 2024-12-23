@@ -40,6 +40,7 @@ public class BDDPacket implements Serializable {
    * smaller ones.
    */
   private static final int JFACTORY_INITIAL_NODE_TABLE_SIZE = 1_000_000;
+  private static final int NDDFACTORY_INITIAL_NODE_TABLE_SIZE = 100_000;
 
   /*
    * The ratio of node table size to node cache size to preserve when resizing. The default
@@ -169,7 +170,8 @@ public class BDDPacket implements Serializable {
       FRAGMENT_OFFSET_LENGTH,
       PACKET_LENGTH_LENGTH
     };
-    ((NDDFactory) _factory).setVarNum(numNeeded, 100000, 20000);
+    ((NDDFactory) _factory).setVarNum(numNeeded, NDDFACTORY_INITIAL_NODE_TABLE_SIZE);
+    // ((NDDFactory) _factory).setVarNum(numNeeded, 100000, 20000);
 
     _bitNames = new HashMap<>();
 
@@ -267,9 +269,11 @@ public class BDDPacket implements Serializable {
   }
 
   private BDD allocateBDDBitAfterPacketVars(String name) {
+    /*
     if (_factory.varNum() < _nextFreeBDDVarIdx + 1) {
       _factory.setVarNum(_nextFreeBDDVarIdx + 1);
     }
+     */
     _bitNames.put(_nextFreeBDDVarIdx, name);
     BDD bdd = _factory.ithVar(_nextFreeBDDVarIdx);
     _nextFreeBDDVarIdx++;
@@ -352,9 +356,11 @@ public class BDDPacket implements Serializable {
    * @return An array of the new {@link BDD} variables.
    */
   private BDD[] allocateBDDBitsAfterPacketVars(String name, int bits) {
+    /*
     if (_factory.varNum() < _nextFreeBDDVarIdx + bits) {
       _factory.setVarNum(_nextFreeBDDVarIdx + bits);
     }
+     */
     BDD[] bdds = new BDD[bits];
     for (int i = 0; i < bits; i++) {
       bdds[i] = _factory.ithVar(_nextFreeBDDVarIdx + i);

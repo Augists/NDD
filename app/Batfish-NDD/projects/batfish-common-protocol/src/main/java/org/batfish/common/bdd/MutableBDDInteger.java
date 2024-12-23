@@ -137,31 +137,32 @@ public final class MutableBDDInteger extends BDDInteger {
       val >>= 1;
     }
     NDDFactory factory = (NDDFactory) _factory;
+    jdd.bdd.BDD bddEngine = factory.bddEngine;
     int f = 0;
     for (Iterator<BDD> iter = _falses.iterator(); iter.hasNext(); ) {
       Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
       Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
       int tmp = f;
-      f = factory.bdd.or(f, iterEdge.next().getValue());
-      factory.bdd.ref(f);
-      factory.bdd.deref(tmp);
+      f = bddEngine.or(f, iterEdge.next().getValue());
+      bddEngine.ref(f);
+      bddEngine.deref(tmp);
     }
     HashMap<NDDFactory.NDD, Integer> mf = new HashMap<>();
-    mf.put(factory.NDDTrue, f);
-    NDDFactory.NDD nddFalse = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
+    mf.put(factory.getTrue(), f);
+    NDDFactory.NDD nddFalse = factory.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
     BDD fret = factory.createBDD(nddFalse);
     int t = 0;
     for (Iterator<BDD> iter = _trues.iterator(); iter.hasNext(); ) {
       Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
       Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
       int tmp = t;
-      f = factory.bdd.and(t, iterEdge.next().getValue());
-      factory.bdd.ref(t);
-      factory.bdd.deref(tmp);
+      f = bddEngine.and(t, iterEdge.next().getValue());
+      bddEngine.ref(t);
+      bddEngine.deref(tmp);
     }
     HashMap<NDDFactory.NDD, Integer> mt = new HashMap<>();
-    mt.put(factory.NDDTrue, f);
-    NDDFactory.NDD nddTrue = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
+    mt.put(factory.getTrue(), f);
+    NDDFactory.NDD nddTrue = factory.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
     BDD tret = factory.createBDD(nddTrue);
     return tret.diffWith(fret);
     // return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
@@ -186,31 +187,32 @@ public final class MutableBDDInteger extends BDDInteger {
       }
     }
     NDDFactory factory = (NDDFactory) _factory;
+    jdd.bdd.BDD bddEngine = factory.bddEngine;
     int f = 0;
     for (Iterator<BDD> iter = _falses.iterator(); iter.hasNext(); ) {
       Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
       Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
       int tmp = f;
-      f = factory.bdd.or(f, iterEdge.next().getValue());
-      factory.bdd.ref(f);
-      factory.bdd.deref(tmp);
+      f = bddEngine.or(f, iterEdge.next().getValue());
+      bddEngine.ref(f);
+      bddEngine.deref(tmp);
     }
     HashMap<NDDFactory.NDD, Integer> mf = new HashMap<>();
-    mf.put(factory.NDDTrue, f);
-    NDDFactory.NDD nddFalse = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
+    mf.put(factory.getTrue(), f);
+    NDDFactory.NDD nddFalse = factory.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mf);
     BDD fret = factory.createBDD(nddFalse);
     int t = 0;
     for (Iterator<BDD> iter = _trues.iterator(); iter.hasNext(); ) {
       Map<NDDFactory.NDD, Integer> e = ((NDDFactory.bdd) iter.next())._index.edges;
       Iterator<Map.Entry<NDDFactory.NDD, Integer>> iterEdge = e.entrySet().iterator();
       int tmp = t;
-      f = factory.bdd.and(t, iterEdge.next().getValue());
-      factory.bdd.ref(t);
-      factory.bdd.deref(tmp);
+      f = bddEngine.and(t, iterEdge.next().getValue());
+      bddEngine.ref(t);
+      bddEngine.deref(tmp);
     }
     HashMap<NDDFactory.NDD, Integer> mt = new HashMap<>();
-    mt.put(factory.NDDTrue, f);
-    NDDFactory.NDD nddTrue = factory.table.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
+    mt.put(factory.getTrue(), f);
+    NDDFactory.NDD nddTrue = factory.mk(((NDDFactory.bdd) _falses.get(0))._index.field, mt);
     BDD tret = factory.createBDD(nddTrue);
     return tret.diffWith(fret);
     // return _factory.andAll(_trues).diffWith(_factory.orAll(_falses));
