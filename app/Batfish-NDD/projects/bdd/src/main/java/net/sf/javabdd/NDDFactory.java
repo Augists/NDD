@@ -1221,11 +1221,6 @@ public class NDDFactory extends BDDFactory {
             return this == getTrue() || this == getFalse();
         }
 
-        @Override
-        public boolean equals(Object ndd) {
-            return this == ndd;
-        }
-
         private void minassignmentbits_rec(BitSet set) {
             if (isFalse() || isTrue()) {
                 return;
