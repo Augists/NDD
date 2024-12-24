@@ -350,10 +350,12 @@ public class NDDFactory extends BDDFactory {
 
     @Override
     public BDD ithVar(int var) {
+//        System.out.println("var " + var);
         // find var in field i
         int i = 0;
         for ( ; i < maxVariablePerField.size(); i++) {
-            if (maxVariablePerField.get(i) > var) {
+            if (maxVariablePerField.get(i) >= var) {
+//                System.out.println("break in " + i + " field with max " + maxVariablePerField.get(i));
                 break;
             }
         }
