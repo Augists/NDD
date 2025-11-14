@@ -653,6 +653,17 @@ public class NDD {
     }
 
     /**
+     * Get the current number of allocated NDD nodes.
+     * @return Node count stored in the node table.
+     */
+    public static long getNodeCount() {
+        if (nodeTable == null) {
+            return 0;
+        }
+        return nodeTable.getCurrentSize();
+    }
+
+    /**
      * The recursive implementation of satCount.
      * @param curr Current ndd node.
      * @param field Current field.

@@ -20,6 +20,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>fmt-nexus</id>
+            <url>https://nexus.web.cern.ch/nexus/content/repositories/public/</url>
+        </repository>
     </repositories>
 
 
@@ -30,11 +34,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>mytool</groupId>
-            <artifactId>jdd</artifactId>
+            <groupId>org.bitbucket.vahidi</groupId>
+            <artifactId>JDD</artifactId>
             <version>111</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/jdd-111.jar</systemPath>
         </dependency>
 
         <dependency>

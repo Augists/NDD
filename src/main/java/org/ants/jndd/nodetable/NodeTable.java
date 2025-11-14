@@ -195,6 +195,14 @@ public class NodeTable {
     }
 
     /**
+     * Get the current number of stored NDD nodes.
+     * @return Number of nodes currently allocated.
+     */
+    public long getCurrentSize() {
+        return currentSize;
+    }
+
+    /**
      * Protect a root node from garbage collection.
      * @param ndd The root to be protected.
      * @return The ndd node.

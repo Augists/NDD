@@ -5,6 +5,18 @@ import org.ants.jndd.diagram.NDD;
 public class NDDSolution {
     public static final int NDD_TABLE_SIZE = 100000000;
 
+    private static final class Result {
+        final double solutions;
+        final long nodes;
+        final double seconds;
+
+        Result(double solutions, long nodes, double seconds) {
+            this.solutions = solutions;
+            this.nodes = nodes;
+            this.seconds = seconds;
+        }
+    }
+
     // declare n fields, n bits per field
     private static void declareFields(int n) {
         for (int i = 0;i < n;i++) {
@@ -68,11 +80,11 @@ public class NDDSolution {
     }
 
     // N is the number of queens, fieldNum is the number of fields in NDD library.
-    public static String Solution(int n) {
+    private static Result solve(int n) {
+        double startTime = System.currentTimeMillis();
+
         // init NDD library
         NDD.initNDD(NDD_TABLE_SIZE, 1 + Math.max(1000, (int) (Math.pow(4.4, n - 6)) * 1000), 10000);
-
-        double startTime = System.currentTimeMillis();
 
         // declare ndd fields
         declareFields(n);
@@ -106,18 +118,31 @@ public class NDDSolution {
                 NDD.deref(impBatch[i][j]);
             }
         }
-        double endTime = System.currentTimeMillis();
-        // todo: add a cache for satCount
-        return "\t" + String.format("" + (endTime - startTime) / 1000, ".3f") + "\t" + NDD.satCount(queen);
+        double solutions = NDD.satCount(queen);
+        long nodes = NDD.getNodeCount();
+        NDD.deref(queen);
+        double seconds = (System.currentTimeMillis() - startTime) / 1000.0;
+        return new Result(solutions, nodes, seconds);
+    }
+
+    /**
+     * Legacy helper kept for compatibility with existing experiments.
+     */
+    public static String Solution(int n) {
+        Result result = solve(n);
+        return "\t" + String.format("%.3f", result.seconds) + "\t" + result.solutions;
     }
 
     public static void main(String[] args) {
-        // System.out.println(Solution(1));
-        // System.out.println(Solution(2));
-        // System.out.println(Solution(3));
-        // System.out.println(Solution(4));
-        // System.out.println(Solution(5));
-        // System.out.println(Solution(6));
-        System.out.println(Solution(12));
+        if (args.length == 0) {
+            System.err.println("Usage: NDDSolution <N> [<N> ...]");
+            System.exit(1);
+        }
+        for (String arg : args) {
+            int n = Integer.parseInt(arg);
+            Result result = solve(n);
+            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes=%d%n",
+                n, result.solutions, result.nodes);
+        }
     }
 }
