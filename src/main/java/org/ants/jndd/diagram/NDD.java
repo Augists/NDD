@@ -664,6 +664,17 @@ public class NDD {
     }
 
     /**
+     * Get the total number of NDD nodes ever created.
+     * @return Total created count (including garbage collected nodes).
+     */
+    public static long getTotalCreated() {
+        if (nodeTable == null) {
+            return 0;
+        }
+        return nodeTable.getTotalCreated();
+    }
+
+    /**
      * The recursive implementation of satCount.
      * @param curr Current ndd node.
      * @param field Current field.

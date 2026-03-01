@@ -7,12 +7,14 @@ public class NDDSolution {
 
     private static final class Result {
         final double solutions;
-        final long nodes;
+        final long nodesCreated;
+        final long nodesAlive;
         final double seconds;
 
-        Result(double solutions, long nodes, double seconds) {
+        Result(double solutions, long nodesCreated, long nodesAlive, double seconds) {
             this.solutions = solutions;
-            this.nodes = nodes;
+            this.nodesCreated = nodesCreated;
+            this.nodesAlive = nodesAlive;
             this.seconds = seconds;
         }
     }
@@ -119,10 +121,11 @@ public class NDDSolution {
             }
         }
         double solutions = NDD.satCount(queen);
-        long nodes = NDD.getNodeCount();
+        long nodesCreated = NDD.getTotalCreated();
+        long nodesAlive = NDD.getNodeCount();
         NDD.deref(queen);
         double seconds = (System.currentTimeMillis() - startTime) / 1000.0;
-        return new Result(solutions, nodes, seconds);
+        return new Result(solutions, nodesCreated, nodesAlive, seconds);
     }
 
     /**
@@ -130,7 +133,7 @@ public class NDDSolution {
      */
     public static String Solution(int n) {
         Result result = solve(n);
-        return "\t" + String.format("%.3f", result.seconds) + "\t" + result.solutions;
+        return "\t" + String.format("%.3f", result.seconds) + "\t" + result.solutions + "\t" + result.nodesAlive;
     }
 
     public static void main(String[] args) {
@@ -141,8 +144,8 @@ public class NDDSolution {
         for (String arg : args) {
             int n = Integer.parseInt(arg);
             Result result = solve(n);
-            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes=%d%n",
-                n, result.solutions, result.nodes);
+            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes_created=%d nodes_alive=%d%n",
+                n, result.solutions, result.nodesCreated, result.nodesAlive);
         }
     }
 }
