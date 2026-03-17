@@ -158,7 +158,7 @@ public class NodeTable {
     /**
      * Garbage collection.
      */
-    private void gc() {
+    public void gc() {
         // protect temporary nodes during NDD operations
         for (NDD ndd : NDD.getTemporarilyProtect()) {
             ref(ndd);

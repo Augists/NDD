@@ -664,6 +664,16 @@ public class NDD {
     }
 
     /**
+     * Run NDD garbage collection immediately.
+     */
+    public static void gc() {
+        if (nodeTable != null) {
+            nodeTable.gc();
+            clearCaches();
+        }
+    }
+
+    /**
      * Get the total number of NDD nodes ever created.
      * @return Total created count (including garbage collected nodes).
      */

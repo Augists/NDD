@@ -83,7 +83,7 @@ public class NDDSolution {
 
     // N is the number of queens, fieldNum is the number of fields in NDD library.
     private static Result solve(int n) {
-        double startTime = System.currentTimeMillis();
+        long startTimeNanos = System.nanoTime();
 
         // init NDD library
         NDD.initNDD(NDD_TABLE_SIZE, 1 + Math.max(1000, (int) (Math.pow(4.4, n - 6)) * 1000), 10000);
@@ -122,9 +122,10 @@ public class NDDSolution {
         }
         double solutions = NDD.satCount(queen);
         long nodesCreated = NDD.getTotalCreated();
-        long nodesAlive = NDD.getNodeCount();
         NDD.deref(queen);
-        double seconds = (System.currentTimeMillis() - startTime) / 1000.0;
+        double seconds = (System.nanoTime() - startTimeNanos) / 1_000_000_000.0;
+        NDD.gc();
+        long nodesAlive = NDD.getNodeCount();
         return new Result(solutions, nodesCreated, nodesAlive, seconds);
     }
 
@@ -144,8 +145,8 @@ public class NDDSolution {
         for (String arg : args) {
             int n = Integer.parseInt(arg);
             Result result = solve(n);
-            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes_created=%d nodes_alive=%d%n",
-                n, result.solutions, result.nodesCreated, result.nodesAlive);
+            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes_created=%d nodes_alive=%d seconds=%.6f%n",
+                n, result.solutions, result.nodesCreated, result.nodesAlive, result.seconds);
         }
     }
 }
