@@ -5,6 +5,20 @@ import org.ants.jndd.diagram.NDD;
 public class NDDSolution {
     public static final int NDD_TABLE_SIZE = 100000000;
 
+    private static final class Result {
+        final double solutions;
+        final long nodesCreated;
+        final long nodesAlive;
+        final double seconds;
+
+        Result(double solutions, long nodesCreated, long nodesAlive, double seconds) {
+            this.solutions = solutions;
+            this.nodesCreated = nodesCreated;
+            this.nodesAlive = nodesAlive;
+            this.seconds = seconds;
+        }
+    }
+
     // declare n fields, n bits per field
     private static void declareFields(int n) {
         for (int i = 0; i < n; i++) {
@@ -69,11 +83,11 @@ public class NDDSolution {
     }
 
     // N is the number of queens, fieldNum is the number of fields in NDD library.
-    public static String Solution(int n) {
+    private static Result solve(int n) {
+        long startTimeNanos = System.nanoTime();
+
         // init NDD library
         NDD.initNDD(NDD_TABLE_SIZE, 1 + Math.max(1000, (int) (Math.pow(4.4, n - 6)) * 1000), 10000);
-
-        double startTime = System.currentTimeMillis();
 
         // declare ndd fields
         declareFields(n);
@@ -107,16 +121,37 @@ public class NDDSolution {
                 NDD.deref(impBatch[i][j]);
             }
         }
-        double endTime = System.currentTimeMillis();
-        return "\t" + String.format("" + (endTime - startTime) / 1000, ".3f") + "\t" + NDD.satCount(queen);
+        double solutions = NDD.satCount(queen);
+        long nodesCreated = NDD.getTotalCreated();
+        NDD.deref(queen);
+        double seconds = (System.nanoTime() - startTimeNanos) / 1_000_000_000.0;
+        NDD.gc();
+        long nodesAlive = NDD.getNodeCount();
+        return new Result(solutions, nodesCreated, nodesAlive, seconds);
+    }
+
+    /**
+     * Legacy helper kept for compatibility with existing experiments.
+     */
+    public static String Solution(int n) {
+        Result result = solve(n);
+        return "\t" + String.format("%.3f", result.seconds) + "\t" + result.solutions + "\t" + result.nodesAlive;
     }
 
     public static void main(String[] args) {
-        // Run full NQueens test
-        System.out.println("\n=== NQueens with BDD Reuse ===");
-        System.out.println("N=4: " + Solution(4));
-        System.out.println("N=8: " + Solution(8));
-        System.out.println("N=10: " + Solution(10));
-        System.out.println("N=12: " + Solution(12));
+        if (args.length == 0) {
+            System.out.println("\n=== NQueens with BDD Reuse ===");
+            System.out.println("N=4: " + Solution(4));
+            System.out.println("N=8: " + Solution(8));
+            System.out.println("N=10: " + Solution(10));
+            System.out.println("N=12: " + Solution(12));
+            return;
+        }
+        for (String arg : args) {
+            int n = Integer.parseInt(arg);
+            Result result = solve(n);
+            System.out.printf("NQUEENS_METRICS n=%d solutions=%.0f nodes_created=%d nodes_alive=%d seconds=%.6f%n",
+                n, result.solutions, result.nodesCreated, result.nodesAlive, result.seconds);
+        }
     }
 }

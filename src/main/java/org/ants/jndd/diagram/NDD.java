@@ -640,6 +640,38 @@ public class NDD {
     }
 
     /**
+     * Get the current number of allocated NDD nodes.
+     * @return Node count stored in the node table.
+     */
+    public static long getNodeCount() {
+        if (nodeTable == null) {
+            return 0;
+        }
+        return nodeTable.getCurrentSize();
+    }
+
+    /**
+     * Run NDD garbage collection immediately.
+     */
+    public static void gc() {
+        if (nodeTable != null) {
+            nodeTable.gc();
+            clearCaches();
+        }
+    }
+
+    /**
+     * Get the total number of NDD nodes ever created.
+     * @return Total created count (including garbage collected nodes).
+     */
+    public static long getTotalCreated() {
+        if (nodeTable == null) {
+            return 0;
+        }
+        return nodeTable.getTotalCreated();
+    }
+
+    /**
      * The recursive implementation of satCount.
      * With shared BDD variables, each field has pendingFieldBitNums.get(field) bits.
      * @param curr Current ndd node.

@@ -14,6 +14,11 @@ import java.util.*;
 
 public class NodeTable {
     /**
+     * The total number of nodes ever created.
+     */
+    long totalCreated;
+
+    /**
      * The current size of the node table.
      */
     long currentSize;
@@ -50,6 +55,7 @@ public class NodeTable {
      * @param bddCacheSize The max size of ndd operation cache.
      */
     public NodeTable(long nddTableSize, int bddTableSize, int bddCacheSize) {
+        this.totalCreated = 0L;
         this.currentSize = 0L;
         this.nddTableSize = nddTableSize;
         this.nodeTable = new ArrayList<>();
@@ -65,6 +71,7 @@ public class NodeTable {
      * @param bddEngine The engine for bdd.
      */
     public NodeTable(long nddTableSize, BDD bddEngine) {
+        this.totalCreated = 0L;
         this.currentSize = 0L;
         this.nddTableSize = nddTableSize;
         this.nodeTable = new ArrayList<>();
@@ -131,6 +138,7 @@ public class NodeTable {
                 nodeTable.get(field).put(edges, newNode);
                 referenceCount.put(newNode, 0);
                 currentSize++;
+                totalCreated++;
                 return newNode;
             } else {
                 // reuse node
@@ -211,6 +219,13 @@ public class NodeTable {
     }
 
     /**
+     * Garbage collection triggered explicitly by NDD callers.
+     */
+    public void gc() {
+        gc(false);
+    }
+
+    /**
      * Perform NDD garbage collection.
      * This method is called as a prehook before JDD GC to ensure
      * NDD nodes are cleaned up before BDD nodes are removed.
@@ -225,6 +240,22 @@ public class NodeTable {
      */
     private void grow() {
         nddTableSize *= 2;
+    }
+
+    /**
+     * Get the current number of stored NDD nodes.
+     * @return Number of nodes currently allocated.
+     */
+    public long getCurrentSize() {
+        return currentSize;
+    }
+
+    /**
+     * Get the total number of NDD nodes ever created.
+     * @return Total number of nodes created (including those later garbage collected).
+     */
+    public long getTotalCreated() {
+        return totalCreated;
     }
 
     /**
