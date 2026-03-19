@@ -1,6 +1,0 @@
-# Project exclude paths
-.idea/
-.vscode/
-/datasets/
-/target/
-**/.DS_Store
